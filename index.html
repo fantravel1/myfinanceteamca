@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFinanceTeam - Your Complete Finance Department, Without the Overhead</title>
+    <meta name="description" content="Expert bookkeeping, accounting, tax, and CFO services for growing SMBs in Southwestern Ontario. Fractional expertise that scales with your business.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.myfinanceteam.ca/">
+    
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/images/hero-bg.webp" type="image/webp">
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS inline -->
+    <style>
+        :root {
+            --navy-primary: #1e3a52;
+            --navy-light: #2c4f6b;
+            --navy-dark: #0f1f2e;
+            --gold-primary: #d4af37;
+            --gold-light: #e4bf47;
+            --gold-dark: #b89f27;
+            --purple-primary: #6b46c1;
+            --purple-dark: #553c9a;
+            --cream: #faf8f5;
+            --gray-light: #f5f5f5;
+            --white: #ffffff;
+            --black: #1a1a1a;
+            --text-dark: #2d2d2d;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --success: #059669;
+            --alert: #dc2626;
+            --shadow: 0 2px 4px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            --max-width: 1400px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--black);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.01em;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        /* Critical above-fold styles */
+        .header {
+            background: var(--white);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 90px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            transform: translateX(5px);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        .hero {
+            background: var(--white);
+            padding: 180px 40px 100px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .hero-text {
+            z-index: 2;
+        }
+        
+        .hero-badges {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: var(--white);
+            color: var(--navy-primary);
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(30, 58, 82, 0.1);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .badge:hover {
+            background: var(--gold-primary);
+            color: var(--white);
+            border-color: var(--gold-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .hero h1 {
+            margin-bottom: 24px;
+            text-transform: none;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            color: var(--text-gray);
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 18px 32px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            min-height: 56px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            letter-spacing: -0.01em;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--navy-primary);
+            border: 2px solid var(--navy-primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        .btn-icon {
+            font-size: 20px;
+            transition: var(--transition);
+        }
+        
+        .btn:hover .btn-icon {
+            transform: translateX(4px);
+        }
+        
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 12px;
+            color: var(--navy-primary);
+        }
+        
+        @media (max-width: 968px) {
+            .nav-container {
+                padding: 0 20px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 90px);
+                background: var(--white);
+                flex-direction: column;
+                padding: 40px 20px;
+                transition: left 0.3s ease;
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero {
+                padding: 140px 20px 80px;
+            }
+        }
+    </style>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="MyFinanceTeam - Complete Finance Solutions for SMBs">
+    <meta property="og:description" content="Expert bookkeeping, accounting, tax, and CFO services that scale with your business in Southwestern Ontario.">
+    <meta property="og:image" content="https://www.myfinanceteam.ca/images/og-image.jpg">
+    <meta property="og:url" content="https://www.myfinanceteam.ca/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MyFinanceTeam - Complete Finance Solutions">
+    <meta name="twitter:description" content="Your fractional finance department in Southwestern Ontario">
+    <meta name="twitter:image" content="https://www.myfinanceteam.ca/images/twitter-card.jpg">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "MyFinanceTeam",
+        "description": "Complete finance department solutions for growing SMBs",
+        "url": "https://www.myfinanceteam.ca",
+        "telephone": "519-608-9883",
+        "email": "info@myfinanceteam.ca",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Woodstock",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+        },
+        "areaServed": ["Woodstock", "London", "Kitchener-Waterloo", "Cambridge", "Hamilton", "Guelph", "Windsor"],
+        "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="/" class="logo" aria-label="MyFinanceTeam Home">
+                <img src="/images/logo.png" alt="MyFinanceTeam Logo" width="60" height="60">
+                <span class="logo-text">MyFinanceTeam</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/bookkeeping">Bookkeeping</a>
+                        <a href="/accounting">Accounting & Reporting</a>
+                        <a href="/payroll">Payroll</a>
+                        <a href="/cfo">Fractional CFO</a>
+                        <a href="/tax">Tax Planning</a>
+                        <a href="/cashflow">Cash Flow Management</a>
+                    </div>
+                </div>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#resources" class="nav-link">Resources</a>
+                <a href="#contact" class="btn btn-primary">
+                    Let's Talk
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badges">
+                    <a href="/bookkeeping" class="badge">Finance</a>
+                    <a href="/accounting" class="badge">Accounting</a>
+                    <a href="/tax" class="badge">Tax</a>
+                </div>
+                <h1>Your Complete Finance Department, Without the Overhead</h1>
+                <p class="hero-subtitle">Expert bookkeeping, accounting, tax, and CFO services that scale with your growing business</p>
+                <p class="hero-description">When you're ready to grow beyond spreadsheets but not quite ready for a full finance team, MyFinanceTeam provides the perfect solution—fractional expertise that grows with you.</p>
+                <div class="hero-actions">
+                    <a href="#consultation" class="btn btn-primary">
+                        Schedule a conversation
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="tel:519-608-9883" class="btn btn-outline">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22 12A10 10 0 0 1 12 22v-2a8 8 0 0 0 8-8h2zM2 12C2 6.477 6.477 2 12 2v2a8 8 0 0 0-8 8H2z"/>
+                            <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        </svg>
+                        519-608-9883
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/images/finance-hero.webp" alt="Professional working on financial data" width="600" height="600" loading="eager">
+            </div>
+        </div>
+    </section>
+    
+    <!-- What We Do Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center">What We Do</h2>
+                <p class="section-lead">From newly incorporated companies that just need bookkeeping and payroll support to scaling venture-backed startups that need help building a team or modelling critical strategies, MyFinanceTeam provides support that's tailored to your growth journey.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-line gold-line"></div>
+                    <h3>Finance & Accounting</h3>
+                    <p>Bookkeeping, accounting, CFO and other mission-critical support for growth-focused companies. We help put order in chaos so you can make data-driven decisions while remaining compliant and efficient.</p>
+                    <a href="/finance" class="service-link">Learn more <span>→</span></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-line navy-line"></div>
+                    <h3>Tax Strategy</h3>
+                    <p>Strategic tax planning throughout the year, not just at year-end. We identify opportunities, optimize structures, and ensure bulletproof compliance while keeping more money in your business.</p>
+                    <a href="/tax" class="service-link">Learn more <span>→</span></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-line black-line"></div>
+                    <h3>Growth Advisory</h3>
+                    <p>Executive-level financial strategy for companies ready to scale. From cash flow optimization to fundraising support, we provide the insights and guidance to fuel your growth.</p>
+                    <a href="/advisory" class="service-link">Learn more <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Work With Us Section -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="why-us-grid">
+                <div class="why-us-content">
+                    <h2>Why Work With Us</h2>
+                    <p class="section-subtitle">3 Things That Set Us Apart</p>
+                </div>
+                <div class="why-us-items">
+                    <div class="why-item">
+                        <div class="why-number">
+                            <img src="/images/number-1.svg" alt="1" width="48" height="48">
+                        </div>
+                        <div class="why-content">
+                            <h3>We Scale with Your Needs</h3>
+                            <p>We understand that growing businesses are in a constant state of change. Whether it's putting in more time at month-end or bringing in a more senior resource for strategic support, we adapt our services as your needs evolve.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-item">
+                        <div class="why-number">
+                            <img src="/images/number-2.svg" alt="2" width="48" height="48">
+                        </div>
+                        <div class="why-content">
+                            <h3>An Expert Team with Deep Specialization</h3>
+                            <p>Our team brings deep industry expertise and real-world experience from top firms and companies. We're here to deliver the kind of high-quality service that makes a real difference for our clients.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="why-item">
+                        <div class="why-number">
+                            <img src="/images/number-3.svg" alt="3" width="48" height="48">
+                        </div>
+                        <div class="why-content">
+                            <h3>We Understand What Matters to Your Business</h3>
+                            <p>We integrate finance, tax, and strategic expertise to create cohesive solutions that address your complete business needs, not just isolated challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Client Logos Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <p class="clients-title">Companies We've Supported</p>
+            <div class="clients-carousel">
+                <!-- Client logos would go here in a carousel -->
+                <div class="client-logos">
+                    <!-- Placeholder for actual logos -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="testimonials-carousel">
+                <div class="testimonial-slide">
+                    <blockquote class="testimonial">
+                        <p>"MyFinanceTeam was with us from seed round to acquisition; an instrumental partner to have along the way."</p>
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <img src="/images/testimonial-1.jpg" alt="Clinton Robinson" width="60" height="60" loading="lazy">
+                        <div>
+                            <cite class="author-name">Clinton Robinson</cite>
+                            <span class="author-title">Co-Founder, CEO, Lane</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Latest Blog Posts Section -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center">Latest Insights</h2>
+                <p class="section-lead">Tools and strategies modern teams need to help their companies grow</p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <a href="/blog/startup-finances" class="blog-image">
+                        <img src="/images/blog-1.jpg" alt="Blog post" width="400" height="300" loading="lazy">
+                    </a>
+                    <div class="blog-content">
+                        <h3><a href="/blog/startup-finances">5 Financial Metrics Every Startup Should Track</a></h3>
+                        <a href="/blog/startup-finances" class="blog-link">
+                            <img src="/images/arrow-east.svg" alt="Read more" width="24" height="24">
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/blog/tax-planning" class="blog-image">
+                        <img src="/images/blog-2.jpg" alt="Blog post" width="400" height="300" loading="lazy">
+                    </a>
+                    <div class="blog-content">
+                        <h3><a href="/blog/tax-planning">Year-End Tax Planning Strategies for SMBs</a></h3>
+                        <a href="/blog/tax-planning" class="blog-link">
+                            <img src="/images/arrow-east.svg" alt="Read more" width="24" height="24">
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/blog/cash-flow" class="blog-image">
+                        <img src="/images/blog-3.jpg" alt="Blog post" width="400" height="300" loading="lazy">
+                    </a>
+                    <div class="blog-content">
+                        <h3><a href="/blog/cash-flow">Master Your Cash Flow with 13-Week Forecasting</a></h3>
+                        <a href="/blog/cash-flow" class="blog-link">
+                            <img src="/images/arrow-east.svg" alt="Read more" width="24" height="24">
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready to help your team do more?</h2>
+                    <p>Let's learn about your needs and see if we can help</p>
+                </div>
+                <div class="cta-action">
+                    <a href="#contact" class="btn btn-white">
+                        Let's Talk
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/images/logo.png" alt="MyFinanceTeam" width="50" height="50">
+                        <span>MyFinanceTeam</span>
+                    </a>
+                    <p>Your complete finance department solution for growing businesses.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/bookkeeping">Bookkeeping</a></li>
+                        <li><a href="/accounting">Accounting</a></li>
+                        <li><a href="/payroll">Payroll</a></li>
+                        <li><a href="/cfo">Fractional CFO</a></li>
+                        <li><a href="/tax">Tax Planning</a></li>
+                        <li><a href="/cashflow">Cash Flow</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/process">Our Process</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>David Rew, Founder<br>
+                    <a href="tel:519-608-9883">519-608-9883</a><br>
+                    <a href="mailto:info@myfinanceteam.ca">info@myfinanceteam.ca</a></p>
+                    <p class="footer-serving">Serving Southwestern Ontario:<br>
+                    Woodstock • London • Kitchener-Waterloo • Cambridge • Hamilton • Guelph • Windsor</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MyFinanceTeam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Non-critical CSS -->
+    <style>
+        /* Additional styles */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            margin-bottom: 24px;
+        }
+        
+        .section-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .bg-white {
+            background: var(--white);
+        }
+        
+        .bg-gray {
+            background: var(--gray-light);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link:hover {
+            color: var(--gold-primary);
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            transition: var(--transition);
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            padding: 20px;
+            box-shadow: var(--shadow-xl);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 0;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .dropdown-menu a:hover {
+            color: var(--gold-primary);
+            transform: translateX(5px);
+        }
+        
+        /* Hero Image */
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            position: relative;
+            transition: var(--transition);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        
+        .service-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .gold-line {
+            background: var(--gold-primary);
+        }
+        
+        .navy-line {
+            background: var(--navy-primary);
+        }
+        
+        .black-line {
+            background: var(--black);
+        }
+        
+        .service-card h3 {
+            margin-bottom: 16px;
+        }
+        
+        .service-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        
+        .service-link {
+            color: var(--navy-primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        
+        .service-link:hover {
+            color: var(--gold-primary);
+            gap: 12px;
+        }
+        
+        /* Why Us Section */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .why-us-content h2 {
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+        }
+        
+        .why-us-items {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .why-item {
+            display: flex;
+            gap: 24px;
+            align-items: start;
+        }
+        
+        .why-number {
+            flex-shrink: 0;
+        }
+        
+        .why-content h3 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+        
+        .why-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* Clients Section */
+        .clients-title {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-gray);
+        }
+        
+        .client-logos {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Testimonials */
+        .testimonial-slide {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .testimonial {
+            margin-bottom: 40px;
+        }
+        
+        .testimonial p {
+            font-size: 1.75rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-name {
+            display: block;
+            font-weight: 600;
+            color: var(--black);
+            font-style: normal;
+        }
+        
+        .author-title {
+            color: var(--text-gray);
+            font-size: 0.875rem;
+        }
+        
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .blog-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .blog-image {
+            display: block;
+            overflow: hidden;
+            height: 240px;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.05);
+        }
+        
+        .blog-content {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .blog-content h3 {
+            flex: 1;
+            font-size: 1.25rem;
+        }
+        
+        .blog-content a {
+            color: var(--black);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .blog-content a:hover {
+            color: var(--gold-primary);
+        }
+        
+        .blog-link {
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+        
+        .blog-link:hover {
+            transform: translateX(5px);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        .cta-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .cta-text h2 {
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+        
+        .cta-text p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+        
+        .btn-white {
+            background: var(--white);
+            color: var(--navy-primary);
+        }
+        
+        .btn-white:hover {
+            background: var(--gray-light);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand {
+            text-align: center;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--white);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .footer-logo span {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .footer-brand p {
+            opacity: 0.7;
+            line-height: 1.8;
+        }
+        
+        .footer h4 {
+            margin-bottom: 24px;
+            font-size: 1.125rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--gold-primary);
+        }
+        
+        .footer-serving {
+            margin-top: 20px;
+            font-size: 0.875rem;
+            opacity: 0.6;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .nav-container {
+                padding: 0 30px;
+            }
+        }
+        
+        @media (max-width: 968px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .why-us-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .services-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero {
+                padding: 120px 20px 60px;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .section-header {
+                margin-bottom: 40px;
+            }
+            
+            .services-grid {
+                margin-top: 30px;
+            }
+            
+            .service-card {
+                padding: 30px 24px;
+            }
+        }
+        
+        /* Accessibility */
+        :focus {
+            outline: 2px solid var(--gold-primary);
+            outline-offset: 2px;
+        }
+        
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .btn {
+                border: 2px solid currentColor;
+            }
+            
+            .service-card {
+                border: 2px solid currentColor;
+            }
+        }
+        
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .header,
+            .hero-actions,
+            .footer {
+                display: none;
+            }
+            
+            body {
+                color: black;
+            }
+            
+            a {
+                text-decoration: underline;
+            }
+        }
+    </style>
+    
+    <!-- Deferred JavaScript -->
+    <script defer>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const header = document.querySelector('.header');
+            
+            // Mobile menu
+            menuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const isOpen = navLinks.classList.contains('active');
+                menuBtn.setAttribute('aria-expanded', isOpen);
+            });
+            
+            // Close menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+            
+            // Header scroll effect
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+            
+            // Intersection Observer for animations
+            const animateElements = document.querySelectorAll('.service-card, .why-item, .blog-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

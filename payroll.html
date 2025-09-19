@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Services - MyFinanceTeam</title>
+    <meta name="description" content="Accurate, compliant payroll services for SMBs in Southwestern Ontario. From payroll processing to year-end T4s, we handle it all.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.myfinanceteam.ca/payroll">
+    
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/images/payroll-hero.webp" type="image/webp">
+    
+    <!-- Copy all critical CSS from previous pages -->
+    <style>
+        /* Same base styles */
+        :root {
+            --navy-primary: #1e3a52;
+            --navy-light: #2c4f6b;
+            --navy-dark: #0f1f2e;
+            --gold-primary: #d4af37;
+            --gold-light: #e4bf47;
+            --gold-dark: #b89f27;
+            --cream: #faf8f5;
+            --gray-light: #f5f5f5;
+            --white: #ffffff;
+            --black: #1a1a1a;
+            --text-dark: #2d2d2d;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --success: #059669;
+            --shadow: 0 2px 4px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            --max-width: 1400px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Header styles */
+        .header {
+            background: var(--white);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 90px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        /* Service Hero */
+        .service-hero {
+            background: var(--cream);
+            padding: 140px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-hero-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .service-hero-text {
+            max-width: 600px;
+        }
+        
+        .service-label {
+            color: var(--gold-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .service-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .service-hero-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 18px 32px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            min-height: 56px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+        }
+        
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 12px;
+                color: var(--navy-primary);
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 90px);
+                background: var(--white);
+                flex-direction: column;
+                padding: 40px 20px;
+                transition: left 0.3s ease;
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .service-hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .service-hero {
+                padding: 120px 20px 60px;
+            }
+        }
+    </style>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Payroll Services - MyFinanceTeam">
+    <meta property="og:description" content="Professional payroll services for growing businesses. Accurate, compliant, stress-free.">
+    <meta property="og:url" content="https://www.myfinanceteam.ca/payroll">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Payroll Services",
+        "provider": {
+            "@type": "Organization",
+            "name": "MyFinanceTeam"
+        },
+        "areaServed": ["Woodstock", "London", "Kitchener-Waterloo", "Cambridge", "Hamilton", "Guelph", "Windsor"],
+        "description": "Professional payroll processing and compliance services"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header (reused structure) -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="/" class="logo" aria-label="MyFinanceTeam Home">
+                <img src="/images/logo.png" alt="MyFinanceTeam Logo" width="60" height="60">
+                <span class="logo-text">MyFinanceTeam</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/bookkeeping">Bookkeeping</a>
+                        <a href="/accounting">Accounting & Reporting</a>
+                        <a href="/payroll" class="active">Payroll</a>
+                        <a href="/cfo">Fractional CFO</a>
+                        <a href="/tax">Tax Planning</a>
+                        <a href="/cashflow">Cash Flow Management</a>
+                    </div>
+                </div>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/process" class="nav-link">Process</a>
+                <a href="/resources" class="nav-link">Resources</a>
+                <a href="/contact" class="btn btn-primary">
+                    Let's Talk
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <div class="service-hero-text">
+                <p class="service-label">PAYROLL</p>
+                <h1>Payroll Support for Growing Teams</h1>
+                <p class="service-hero-lead">Payroll is tricky, and it's one of the most common places where well-meaning founders slip up—sometimes in ways that cost real money. Our team of payroll pros has it covered. We'll make sure your employees are paid accurately and on time, and that every government remittance is handled without a hitch.</p>
+                <a href="#consultation" class="btn btn-primary">
+                    Schedule a conversation
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+            <div class="service-hero-image">
+                <img src="/images/payroll-hero.webp" alt="Payroll management dashboard" width="600" height="500" loading="eager">
+            </div>
+        </div>
+    </section>
+    
+    <!-- When We Can Help Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="section-title">When You Need Professional Payroll Support</h2>
+            
+            <div class="help-grid">
+                <div class="help-item">
+                    <div class="help-number">1</div>
+                    <div class="help-content">
+                        <h3>You're a New Founder and Don't Know Where to Start</h3>
+                        <p>Chances are, you didn't learn how to do payroll in school. You could roll up your sleeves and learn by trial and error, or you could get experts to do it for you and avoid costly mistakes.</p>
+                    </div>
+                </div>
+                
+                <div class="help-item">
+                    <div class="help-number">2</div>
+                    <div class="help-content">
+                        <h3>You Want to Offload Payroll to Free Up Valuable Time</h3>
+                        <p>Every hour spent on payroll is an hour not spent growing your business. Hand it off to experts so you can focus on the strategic work that drives enterprise value.</p>
+                    </div>
+                </div>
+                
+                <div class="help-item">
+                    <div class="help-number">3</div>
+                    <div class="help-content">
+                        <h3>You're Growing and Payroll is Getting More Complex</h3>
+                        <p>Maybe you have employees in another province, contractors to manage, or your team is growing faster than your payroll process can handle. Let us manage the complexity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Solutions Section -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Complete Payroll Management</h2>
+                <p class="section-lead">From first employee to full team, we handle every aspect of payroll</p>
+            </div>
+            
+            <div class="solutions-cards">
+                <div class="solution-main">
+                    <h3>End-to-End Payroll Management</h3>
+                    <p>From selecting the right payroll system to making sure payday happens every time. Let us take this one off your hands completely.</p>
+                    
+                    <div class="solution-features">
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Bi-weekly or semi-monthly processing</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Direct deposit setup and management</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Employee and contractor payments</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Benefits and deductions management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-secondary">
+                    <div class="solution-card">
+                        <h3>Unlimited Payroll Support</h3>
+                        <p>Payroll questions pop up all the time—we get it. Whether you're figuring out how to handle a bonus or need details on an employee's pay, we're here with answers.</p>
+                    </div>
+                    
+                    <div class="solution-card">
+                        <h3>Accurate Remittances</h3>
+                        <p>Payroll mistakes—like incorrect withholdings or missed government remittances—can get expensive fast. We use smart, cloud-based payroll solutions to ensure everything is accurate and on time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Compliance Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="compliance-grid">
+                <div class="compliance-content">
+                    <h2>Complete Compliance Coverage</h2>
+                    <p class="compliance-lead">Stay compliant with all government requirements, from CRA to WSIB</p>
+                    
+                    <div class="compliance-items">
+                        <div class="compliance-item">
+                            <h4>CRA Compliance</h4>
+                            <ul>
+                                <li>CPP/EI calculations and remittances</li>
+                                <li>Income tax withholdings</li>
+                                <li>T4 and T4A preparation and filing</li>
+                                <li>ROE submissions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="compliance-item">
+                            <h4>Provincial Requirements</h4>
+                            <ul>
+                                <li>WSIB reporting and payments</li>
+                                <li>EHT calculations and filing</li>
+                                <li>Provincial tax compliance</li>
+                                <li>Vacation pay tracking</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="compliance-item">
+                            <h4>Multi-Provincial Support</h4>
+                            <ul>
+                                <li>Remote employee compliance</li>
+                                <li>Provincial tax variations</li>
+                                <li>Employment standards adherence</li>
+                                <li>Cross-border considerations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="compliance-guarantee">
+                    <div class="guarantee-card">
+                        <h3>Our Compliance Guarantee</h3>
+                        <p>We're so confident in our accuracy that we'll cover any penalties resulting from our errors. Your peace of mind is our priority.</p>
+                        <div class="guarantee-stats">
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">On-time filing rate</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Compliance issues in 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Technology Section -->
+    <section class="section bg-navy">
+        <div class="container">
+            <div class="tech-payroll">
+                <h2 class="section-title text-white text-center">Modern Payroll Technology</h2>
+                <p class="tech-lead text-center">We leverage Canada's leading payroll platforms for accuracy and efficiency</p>
+                
+                <div class="payroll-features">
+                    <div class="payroll-feature">
+                        <div class="feature-icon-wrapper">
+                            <img src="/images/employee-portal-icon.svg" alt="Employee Portal" width="64" height="64">
+                        </div>
+                        <h3>Employee Self-Service</h3>
+                        <p>Employees access pay stubs, T4s, and vacation balances anytime through secure portals</p>
+                    </div>
+                    
+                    <div class="payroll-feature">
+                        <div class="feature-icon-wrapper">
+                            <img src="/images/automation-icon.svg" alt="Automation" width="64" height="64">
+                        </div>
+                        <h3>Automated Calculations</h3>
+                        <p>Complex calculations for overtime, statutory holidays, and benefits handled automatically</p>
+                    </div>
+                    
+                    <div class="payroll-feature">
+                        <div class="feature-icon-wrapper">
+                            <img src="/images/integration-icon.svg" alt="Integration" width="64" height="64">
+                        </div>
+                        <h3>Seamless Integration</h3>
+                        <p>Direct integration with your accounting software for effortless financial reporting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="section bg-cream">
+        <div class="container">
+            <div class="pricing-content">
+                <h2 class="section-title text-center">Transparent, Predictable Pricing</h2>
+                <p class="section-lead text-center">No hidden fees, no surprises—just reliable payroll service</p>
+                
+                <div class="pricing-cards">
+                    <div class="pricing-card">
+                        <h3>Startup Package</h3>
+                        <p class="price">From $99/month</p>
+                        <p class="price-detail">+ $4 per employee</p>
+                        <ul>
+                            <li>Up to 10 employees</li>
+                            <li>Bi-weekly or semi-monthly</li>
+                            <li>Direct deposit</li>
+                            <li>Government remittances</li>
+                            <li>Year-end T4s</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <span class="featured-badge">Most Popular</span>
+                        <h3>Growth Package</h3>
+                        <p class="price">From $199/month</p>
+                        <p class="price-detail">+ $3.50 per employee</p>
+                        <ul>
+                            <li>11-50 employees</li>
+                            <li>Everything in Startup</li>
+                            <li>Multi-provincial support</li>
+                            <li>Benefits administration</li>
+                            <li>Employee portal access</li>
+                            <li>Dedicated support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>Enterprise Package</h3>
+                        <p class="price">Custom Pricing</p>
+                        <p class="price-detail">For 50+ employees</p>
+                        <ul>
+                            <li>Unlimited employees</li>
+                            <li>Everything in Growth</li>
+                            <li>Custom reporting</li>
+                            <li>API integration</li>
+                            <li>Priority support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="cta-centered">
+                <h2 class="cta-title">Never Worry About Payroll Again</h2>
+                <p class="cta-subtitle">Join hundreds of businesses who trust us with their most important responsibility—paying their people</p>
+                <div class="cta-actions">
+                    <a href="/contact" class="btn btn-primary">
+                        Get Started Today
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <p class="cta-note">First month setup free for new clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer (reuse from homepage) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/images/logo.png" alt="MyFinanceTeam" width="50" height="50">
+                        <span>MyFinanceTeam</span>
+                    </a>
+                    <p>Your complete finance department solution for growing businesses.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/bookkeeping">Bookkeeping</a></li>
+                        <li><a href="/accounting">Accounting</a></li>
+                        <li><a href="/payroll">Payroll</a></li>
+                        <li><a href="/cfo">Fractional CFO</a></li>
+                        <li><a href="/tax">Tax Planning</a></li>
+                        <li><a href="/cashflow">Cash Flow</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/process">Our Process</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>David Rew, Founder<br>
+                    <a href="tel:519-608-9883">519-608-9883</a><br>
+                    <a href="mailto:info@myfinanceteam.ca">info@myfinanceteam.ca</a></p>
+                    <p class="footer-serving">Serving Southwestern Ontario:<br>
+                    Woodstock • London • Kitchener-Waterloo • Cambridge • Hamilton • Guelph • Windsor</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MyFinanceTeam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Non-critical CSS -->
+    <style>
+        /* Base styles */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .section-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .bg-white {
+            background: var(--white);
+        }
+        
+        .bg-gray {
+            background: var(--gray-light);
+        }
+        
+        .bg-navy {
+            background: var(--navy-primary);
+        }
+        
+        .bg-cream {
+            background: var(--cream);
+        }
+        
+        .text-white {
+            color: var(--white);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Navigation styles */
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold-primary);
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            padding: 20px;
+            box-shadow: var(--shadow-xl);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 0;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .dropdown-menu a:hover,
+        .dropdown-menu a.active {
+            color: var(--gold-primary);
+            transform: translateX(5px);
+        }
+        
+        /* Service Hero Image */
+        .service-hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* Help Grid */
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .help-item {
+            display: flex;
+            gap: 24px;
+            align-items: start;
+        }
+        
+        .help-number {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: var(--gold-primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .help-content h3 {
+            margin-bottom: 12px;
+            color: var(--black);
+        }
+        
+        .help-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* Solutions Cards */
+        .solutions-cards {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .solution-main {
+            background: var(--white);
+            padding: 48px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .solution-main h3 {
+            font-size: 1.75rem;
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+        
+        .solution-main p {
+            color: var(--text-gray);
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+        
+        .solution-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .feature-icon {
+            flex-shrink: 0;
+        }
+        
+        .solution-secondary {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .solution-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .solution-card h3 {
+            margin-bottom: 12px;
+            color: var(--black);
+        }
+        
+        .solution-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* Compliance Section */
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .compliance-content h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+        
+        .compliance-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+        
+        .compliance-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .compliance-item h4 {
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+        
+        .compliance-item ul {
+            list-style: none;
+        }
+        
+        .compliance-item li {
+            color: var(--text-gray);
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .compliance-item li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold-primary);
+            font-weight: bold;
+        }
+        
+        .guarantee-card {
+            background: var(--cream);
+            border: 2px solid var(--gold-primary);
+            border-radius: 8px;
+            padding: 48px;
+            text-align: center;
+        }
+        
+        .guarantee-card h3 {
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+        
+        .guarantee-card p {
+            color: var(--text-gray);
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+        
+        .guarantee-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.875rem;
+        }
+        
+        /* Payroll Technology Section */
+        .tech-payroll {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .tech-lead {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 60px;
+        }
+        
+        .payroll-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 48px;
+        }
+        
+        .payroll-feature {
+            text-align: center;
+        }
+        
+        .feature-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        
+        .payroll-feature h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+        
+        .payroll-feature p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+        
+        /* Pricing Cards */
+        .pricing-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+        
+        .pricing-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 48px;
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid var(--gold-primary);
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold-primary);
+            color: var(--white);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .pricing-card h3 {
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            margin-bottom: 8px;
+        }
+        
+        .price-detail {
+            color: var(--text-gray);
+            margin-bottom: 32px;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .pricing-card li {
+            padding: 8px 0;
+            color: var(--text-gray);
+            position: relative;
+            padding-left: 24px;
+        }
+        
+        .pricing-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold-primary);
+        }
+        
+        /* CTA Centered */
+        .cta-centered {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+        
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .cta-note {
+            margin-top: 16px;
+            color: var(--text-gray);
+            font-size: 0.875rem;
+        }
+        
+        /* Footer styles */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand {
+            text-align: center;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--white);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .footer h4 {
+            margin-bottom: 24px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--gold-primary);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .help-grid,
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .solutions-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .compliance-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .compliance-items {
+                grid-template-columns: 1fr;
+            }
+            
+            .payroll-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .service-hero {
+                padding: 100px 20px 40px;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .solution-main {
+                padding: 32px 24px;
+            }
+            
+            .solution-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Deferred JavaScript -->
+    <script defer>
+        // Reuse mobile menu and header scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const header = document.querySelector('.header');
+            
+            // Mobile menu
+            menuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const isOpen = navLinks.classList.contains('active');
+                menuBtn.setAttribute('aria-expanded', isOpen);
+            });
+            
+            // Close menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+            
+            // Header scroll effect
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+        });
+    </script>
+</body>
+</html>

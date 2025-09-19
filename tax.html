@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Planning & Compliance Services - MyFinanceTeam</title>
+    <meta name="description" content="Proactive tax strategy and compliance for SMBs in Southwestern Ontario. Minimize taxes, maximize credits, ensure bulletproof compliance year-round.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.myfinanceteam.ca/tax">
+    
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/images/tax-hero.webp" type="image/webp">
+    
+    <!-- Copy all critical CSS from previous pages -->
+    <style>
+        /* Same base styles */
+        :root {
+            --navy-primary: #1e3a52;
+            --navy-light: #2c4f6b;
+            --navy-dark: #0f1f2e;
+            --gold-primary: #d4af37;
+            --gold-light: #e4bf47;
+            --gold-dark: #b89f27;
+            --cream: #faf8f5;
+            --gray-light: #f5f5f5;
+            --white: #ffffff;
+            --black: #1a1a1a;
+            --text-dark: #2d2d2d;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --success: #059669;
+            --shadow: 0 2px 4px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            --max-width: 1400px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Header styles */
+        .header {
+            background: var(--white);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 90px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        /* Service Hero */
+        .service-hero {
+            background: var(--white);
+            padding: 140px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-hero-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .service-hero-text {
+            max-width: 600px;
+        }
+        
+        .service-label {
+            color: var(--gold-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .service-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .service-hero-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 18px 32px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            min-height: 56px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+        }
+        
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 12px;
+                color: var(--navy-primary);
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 90px);
+                background: var(--white);
+                flex-direction: column;
+                padding: 40px 20px;
+                transition: left 0.3s ease;
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .service-hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .service-hero {
+                padding: 120px 20px 60px;
+            }
+        }
+    </style>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tax Planning & Compliance - MyFinanceTeam">
+    <meta property="og:description" content="Strategic tax planning and compliance services for growing businesses. Minimize taxes, maximize opportunities.">
+    <meta property="og:url" content="https://www.myfinanceteam.ca/tax">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Tax Planning & Compliance Services",
+        "provider": {
+            "@type": "Organization",
+            "name": "MyFinanceTeam"
+        },
+        "areaServed": ["Woodstock", "London", "Kitchener-Waterloo", "Cambridge", "Hamilton", "Guelph", "Windsor"],
+        "description": "Professional tax planning and compliance services for SMBs"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header (reused structure) -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="/" class="logo" aria-label="MyFinanceTeam Home">
+                <img src="/images/logo.png" alt="MyFinanceTeam Logo" width="60" height="60">
+                <span class="logo-text">MyFinanceTeam</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/bookkeeping">Bookkeeping</a>
+                        <a href="/accounting">Accounting & Reporting</a>
+                        <a href="/payroll">Payroll</a>
+                        <a href="/cfo">Fractional CFO</a>
+                        <a href="/tax" class="active">Tax Planning</a>
+                        <a href="/cashflow">Cash Flow Management</a>
+                    </div>
+                </div>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/process" class="nav-link">Process</a>
+                <a href="/resources" class="nav-link">Resources</a>
+                <a href="/contact" class="btn btn-primary">
+                    Let's Talk
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <div class="service-hero-text">
+                <p class="service-label">TAX PLANNING & COMPLIANCE</p>
+                <h1>Proactive Tax Strategy, Not Just Filing</h1>
+                <p class="service-hero-lead">Tax isn't just a year-end scramble—it's a year-round opportunity to keep more of what you earn. Our tax experts work proactively with your business to minimize taxes, maximize credits, and ensure bulletproof compliance.</p>
+                <a href="#consultation" class="btn btn-primary">
+                    Schedule a conversation
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+            <div class="service-hero-image">
+                <img src="/images/tax-hero.webp" alt="Strategic tax planning session" width="600" height="500" loading="eager">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Beyond Basic Tax Returns Section -->
+    <section class="section bg-gray">
+        <div class="container">
+            <h2 class="section-title">Beyond Basic Tax Returns</h2>
+            
+            <div class="tax-strategies-grid">
+                <div class="tax-strategy">
+                    <div class="strategy-icon">
+                        <img src="/images/strategy-icon.svg" alt="Strategic Planning" width="64" height="64">
+                    </div>
+                    <h3>Strategic Tax Planning</h3>
+                    <p>Stop leaving money on the table. We identify opportunities throughout the year, not just at year-end.</p>
+                </div>
+                
+                <div class="tax-strategy">
+                    <div class="strategy-icon">
+                        <img src="/images/entity-icon.svg" alt="Multi-Entity" width="64" height="64">
+                    </div>
+                    <h3>Multi-Entity Optimization</h3>
+                    <p>Structure your operations to minimize tax across corporations, holdings companies, and trusts.</p>
+                </div>
+                
+                <div class="tax-strategy">
+                    <div class="strategy-icon">
+                        <img src="/images/compensation-icon.svg" alt="Compensation Planning" width="64" height="64">
+                    </div>
+                    <h3>Owner Compensation Planning</h3>
+                    <p>Optimize the mix of salary, dividends, and benefits for tax efficiency.</p>
+                </div>
+                
+                <div class="tax-strategy">
+                    <div class="strategy-icon">
+                        <img src="/images/succession-icon.svg" alt="Succession Planning" width="64" height="64">
+                    </div>
+                    <h3>Succession & Exit Planning</h3>
+                    <p>Prepare now to minimize taxes when it's time to transition or sell.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Comprehensive Tax Services Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comprehensive Tax Services</h2>
+            </div>
+            
+            <div class="tax-services-tabs">
+                <div class="tab-content active" id="corporate-tax">
+                    <h3>Corporate Tax Services</h3>
+                    <div class="services-grid">
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>T2 corporate tax returns</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Scientific Research & Development (SR&ED) claims</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Manufacturing & Processing credits</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Provincial tax credit optimization</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>GST/HST/PST compliance and filing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="planning-advisory">
+                    <h3>Tax Planning & Advisory</h3>
+                    <div class="services-grid">
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Corporate structure optimization</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Income splitting strategies</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Estate freeze implementation</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Capital gains planning</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Cross-border tax planning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="compliance-management">
+                    <h3>Compliance Management</h3>
+                    <div class="services-grid">
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>CRA audit support</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Voluntary disclosure programs</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Tax account management</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Installment planning</span>
+                        </div>
+                        <div class="service-item">
+                            <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 6L9 17L4 12" stroke="var(--gold-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Notice of assessment reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tax Advantage Section -->
+    <section class="section bg-navy">
+        <div class="container">
+            <h2 class="section-title text-white text-center">The MyFinanceTeam Tax Advantage</h2>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <span>🎯</span>
+                    </div>
+                    <h3>Proactive, Not Reactive</h3>
+                    <p>We monitor tax changes and identify opportunities throughout the year.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <span>💼</span>
+                    </div>
+                    <h3>Integrated with Your Finances</h3>
+                    <p>Our tax team works hand-in-hand with your bookkeeping and CFO services.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <span>🛡️</span>
+                    </div>
+                    <h3>Audit-Ready Always</h3>
+                    <p>Sleep soundly knowing your tax positions are documented and defensible.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <span>📈</span>
+                    </div>
+                    <h3>Growth-Focused Strategies</h3>
+                    <p>Tax strategies that support your business goals, not just minimize current taxes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tax Savings Section -->
+    <section class="section bg-cream">
+        <div class="container">
+            <div class="tax-savings-content">
+                <h2 class="section-title text-center">Your Tax Strategy Starts Here</h2>
+                <p class="section-lead text-center">Most businesses overpay taxes simply because they don't plan. We'll ensure you keep every dollar you're entitled to.</p>
+                
+                <div class="savings-opportunities">
+                    <div class="opportunity-card">
+                        <h3>SR&ED Credits</h3>
+                        <p>R&D tax credits you might be missing</p>
+                        <a href="/resources/sred-guide" class="opportunity-link">Learn More →</a>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <h3>Grant Optimization</h3>
+                        <p>Maximize government funding opportunities</p>
+                        <a href="/resources/grants" class="opportunity-link">Learn More →</a>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <h3>Structure Review</h3>
+                        <p>Ensure your corporate structure is tax-efficient</p>
+                        <a href="/resources/structure" class="opportunity-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="cta-centered">
+                <h2 class="cta-title">Stop Overpaying Taxes</h2>
+                <p class="cta-subtitle">Let's review your tax situation and identify savings opportunities.</p>
+                <div class="cta-actions">
+                    <a href="/contact" class="btn btn-primary">
+                        Get a Tax Review
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="tel:519-608-9883" class="btn btn-outline">
+                        Call 519-608-9883
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer (reuse from homepage) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/images/logo.png" alt="MyFinanceTeam" width="50" height="50">
+                        <span>MyFinanceTeam</span>
+                    </a>
+                    <p>Your complete finance department solution for growing businesses.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/bookkeeping">Bookkeeping</a></li>
+                        <li><a href="/accounting">Accounting</a></li>
+                        <li><a href="/payroll">Payroll</a></li>
+                        <li><a href="/cfo">Fractional CFO</a></li>
+                        <li><a href="/tax">Tax Planning</a></li>
+                        <li><a href="/cashflow">Cash Flow</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/process">Our Process</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>David Rew, Founder<br>
+                    <a href="tel:519-608-9883">519-608-9883</a><br>
+                    <a href="mailto:info@myfinanceteam.ca">info@myfinanceteam.ca</a></p>
+                    <p class="footer-serving">Serving Southwestern Ontario:<br>
+                    Woodstock • London • Kitchener-Waterloo • Cambridge • Hamilton • Guelph • Windsor</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MyFinanceTeam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Non-critical CSS -->
+    <style>
+        /* Base styles */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .section-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .bg-white {
+            background: var(--white);
+        }
+        
+        .bg-gray {
+            background: var(--gray-light);
+        }
+        
+        .bg-navy {
+            background: var(--navy-primary);
+        }
+        
+        .bg-cream {
+            background: var(--cream);
+        }
+        
+        .text-white {
+            color: var(--white);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Navigation styles */
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold-primary);
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            padding: 20px;
+            box-shadow: var(--shadow-xl);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 0;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .dropdown-menu a:hover,
+        .dropdown-menu a.active {
+            color: var(--gold-primary);
+            transform: translateX(5px);
+        }
+        
+        /* Service Hero Image */
+        .service-hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* Tax Strategies Grid */
+        .tax-strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .tax-strategy {
+            text-align: center;
+            padding: 32px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .tax-strategy:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .strategy-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: var(--cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tax-strategy h3 {
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+        
+        .tax-strategy p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* Tax Services Tabs */
+        .tax-services-tabs {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .tab-content {
+            background: var(--gray-light);
+            padding: 48px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+        
+        .tab-content h3 {
+            margin-bottom: 32px;
+            color: var(--black);
+            font-size: 1.5rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .service-item span {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .check-icon {
+            flex-shrink: 0;
+        }
+        
+        /* Advantages Grid */
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+        
+        .advantage-card {
+            text-align: center;
+        }
+        
+        .advantage-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+        }
+        
+        .advantage-card h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+        
+        .advantage-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+        
+        /* Savings Opportunities */
+        .tax-savings-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .savings-opportunities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+        
+        .opportunity-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .opportunity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .opportunity-card h3 {
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+        
+        .opportunity-card p {
+            color: var(--text-gray);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+        
+        .opportunity-link {
+            color: var(--gold-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .opportunity-link:hover {
+            color: var(--gold-dark);
+        }
+        
+        /* CTA Centered */
+        .cta-centered {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+        
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .cta-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--navy-primary);
+            border: 2px solid var(--navy-primary);
+            text-decoration: none;
+        }
+        
+        .btn-outline:hover {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        /* Footer styles */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand {
+            text-align: center;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--white);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .footer h4 {
+            margin-bottom: 24px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--gold-primary);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .tax-strategies-grid,
+            .savings-opportunities {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-content {
+                padding: 32px 24px;
+            }
+            
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .service-hero {
+                padding: 100px 20px 40px;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+    
+    <!-- Deferred JavaScript -->
+    <script defer>
+        // Reuse mobile menu and header scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const header = document.querySelector('.header');
+            
+            // Mobile menu
+            menuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const isOpen = navLinks.classList.contains('active');
+                menuBtn.setAttribute('aria-expanded', isOpen);
+            });
+            
+            // Close menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+            
+            // Header scroll effect
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+        });
+    </script>
+</body>
+</html>

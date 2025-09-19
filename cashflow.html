@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Flow Management & Financial Control - MyFinanceTeam</title>
+    <meta name="description" content="Master your cash flow and financial controls. Real-time visibility, predictive forecasting, and strategic optimization for SMBs in Southwestern Ontario.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.myfinanceteam.ca/cashflow">
+    
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/images/cashflow-hero.webp" type="image/webp">
+    
+    <!-- Copy all critical CSS from previous pages -->
+    <style>
+        /* Same base styles */
+        :root {
+            --navy-primary: #1e3a52;
+            --navy-light: #2c4f6b;
+            --navy-dark: #0f1f2e;
+            --gold-primary: #d4af37;
+            --gold-light: #e4bf47;
+            --gold-dark: #b89f27;
+            --cream: #faf8f5;
+            --gray-light: #f5f5f5;
+            --white: #ffffff;
+            --black: #1a1a1a;
+            --text-dark: #2d2d2d;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --success: #059669;
+            --shadow: 0 2px 4px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            --max-width: 1400px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Header styles */
+        .header {
+            background: var(--white);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 90px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        /* Service Hero */
+        .service-hero {
+            background: var(--gray-light);
+            padding: 140px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-hero-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .service-hero-text {
+            max-width: 600px;
+        }
+        
+        .service-label {
+            color: var(--gold-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .service-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .service-hero-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 18px 32px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            min-height: 56px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+        }
+        
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 12px;
+                color: var(--navy-primary);
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 90px);
+                background: var(--white);
+                flex-direction: column;
+                padding: 40px 20px;
+                transition: left 0.3s ease;
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .service-hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .service-hero {
+                padding: 120px 20px 60px;
+            }
+        }
+    </style>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cash Flow Management - MyFinanceTeam">
+    <meta property="og:description" content="Master your cash flow with real-time visibility and strategic financial control systems.">
+    <meta property="og:url" content="https://www.myfinanceteam.ca/cashflow">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Cash Flow Management & Financial Control",
+        "provider": {
+            "@type": "Organization",
+            "name": "MyFinanceTeam"
+        },
+        "areaServed": ["Woodstock", "London", "Kitchener-Waterloo", "Cambridge", "Hamilton", "Guelph", "Windsor"],
+        "description": "Cash flow management and financial control systems for SMBs"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header (reused structure) -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="/" class="logo" aria-label="MyFinanceTeam Home">
+                <img src="/images/logo.png" alt="MyFinanceTeam Logo" width="60" height="60">
+                <span class="logo-text">MyFinanceTeam</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/bookkeeping">Bookkeeping</a>
+                        <a href="/accounting">Accounting & Reporting</a>
+                        <a href="/payroll">Payroll</a>
+                        <a href="/cfo">Fractional CFO</a>
+                        <a href="/tax">Tax Planning</a>
+                        <a href="/cashflow" class="active">Cash Flow Management</a>
+                    </div>
+                </div>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/process" class="nav-link">Process</a>
+                <a href="/resources" class="nav-link">Resources</a>
+                <a href="/contact" class="btn btn-primary">
+                    Let's Talk
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="service-hero-content">
+            <div class="service-hero-text">
+                <p class="service-label">FINANCIAL CONTROL & CASH FLOW</p>
+                <h1>Master Your Cash Flow, Control Your Destiny</h1>
+                <p class="service-hero-lead">Cash is the lifeblood of your business. Without clear visibility and strong controls, even profitable businesses can struggle. We implement systems and processes that give you complete command of your financial position.</p>
+                <a href="#consultation" class="btn btn-primary">
+                    Schedule a conversation
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+            <div class="service-hero-image">
+                <img src="/images/cashflow-hero.webp" alt="Cash flow dashboard and analysis" width="600" height="500" loading="eager">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cost of Poor Control Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="section-title">The Cost of Poor Financial Control</h2>
+            
+            <div class="cost-grid">
+                <div class="cost-item">
+                    <div class="cost-icon negative">❌</div>
+                    <h3>Surprise Cash Crunches</h3>
+                    <p>Running out of cash because you didn't see it coming</p>
+                </div>
+                
+                <div class="cost-item">
+                    <div class="cost-icon negative">❌</div>
+                    <h3>Missed Opportunities</h3>
+                    <p>Can't pursue growth because you're unsure of your financial capacity</p>
+                </div>
+                
+                <div class="cost-item">
+                    <div class="cost-icon negative">❌</div>
+                    <h3>Inefficient Operations</h3>
+                    <p>Money leaking through poor processes and lack of controls</p>
+                </div>
+                
+                <div class="cost-item">
+                    <div class="cost-icon negative">❌</div>
+                    <h3>Stakeholder Concerns</h3>
+                    <p>Banks, investors, and partners losing confidence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Financial Control Solutions Section -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Financial Control Solutions</h2>
+                <p class="section-lead">Complete visibility and control over your financial operations</p>
+            </div>
+            
+            <div class="control-solutions">
+                <div class="solution-block">
+                    <h3>Cash Flow Management</h3>
+                    <ul class="solution-list">
+                        <li>13-week rolling cash forecasts</li>
+                        <li>Daily cash position reporting</li>
+                        <li>Scenario planning tools</li>
+                        <li>Working capital optimization</li>
+                        <li>Collection process improvement</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-block">
+                    <h3>Internal Controls Implementation</h3>
+                    <ul class="solution-list">
+                        <li>Approval hierarchies</li>
+                        <li>Segregation of duties</li>
+                        <li>Fraud prevention measures</li>
+                        <li>Expense management systems</li>
+                        <li>Financial policy development</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-block">
+                    <h3>Performance Monitoring</h3>
+                    <ul class="solution-list">
+                        <li>Real-time financial dashboards</li>
+                        <li>Automated variance alerts</li>
+                        <li>Trend analysis and reporting</li>
+                        <li>Budget vs. actual tracking</li>
+                        <li>Predictive analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Transformation Section -->
+    <section class="section bg-navy">
+        <div class="container">
+            <h2 class="section-title text-white text-center">Transform Your Financial Operations</h2>
+            
+            <div class="transformation-grid">
+                <div class="transform-item">
+                    <div class="transform-from">
+                        <span class="label">From</span>
+                        <h3>Reactive</h3>
+                    </div>
+                    <div class="transform-arrow">→</div>
+                    <div class="transform-to">
+                        <span class="label">To</span>
+                        <h3>Proactive</h3>
+                    </div>
+                    <p>Stop putting out fires. Anticipate challenges and opportunities before they arrive.</p>
+                </div>
+                
+                <div class="transform-item">
+                    <div class="transform-from">
+                        <span class="label">From</span>
+                        <h3>Guesswork</h3>
+                    </div>
+                    <div class="transform-arrow">→</div>
+                    <div class="transform-to">
+                        <span class="label">To</span>
+                        <h3>Confidence</h3>
+                    </div>
+                    <p>Make decisions based on real data, not gut feelings.</p>
+                </div>
+                
+                <div class="transform-item">
+                    <div class="transform-from">
+                        <span class="label">From</span>
+                        <h3>Chaos</h3>
+                    </div>
+                    <div class="transform-arrow">→</div>
+                    <div class="transform-to">
+                        <span class="label">To</span>
+                        <h3>Control</h3>
+                    </div>
+                    <p>Implement processes that scale with your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Building Your Financial Control System</h2>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Assessment</h3>
+                    <p>We analyze your current processes, identify gaps, and prioritize improvements.</p>
+                </div>
+                
+                <div class="process-connector"></div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Design</h3>
+                    <p>Custom controls and processes tailored to your business model and goals.</p>
+                </div>
+                
+                <div class="process-connector"></div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Implementation</h3>
+                    <p>Systematic rollout with training and documentation.</p>
+                </div>
+                
+                <div class="process-connector"></div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Optimization</h3>
+                    <p>Continuous improvement as your business evolves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Dashboard Preview Section -->
+    <section class="section bg-cream">
+        <div class="container">
+            <div class="dashboard-preview">
+                <h2 class="section-title text-center">Real-Time Financial Visibility</h2>
+                <p class="section-lead text-center">Know exactly where you stand, at any moment</p>
+                
+                <div class="dashboard-features">
+                    <div class="dashboard-feature">
+                        <h3>📊 Live Cash Position</h3>
+                        <p>Current balance, pending transactions, and available credit at a glance</p>
+                    </div>
+                    
+                    <div class="dashboard-feature">
+                        <h3>📈 13-Week Forecast</h3>
+                        <p>Rolling projections that update daily with actual results</p>
+                    </div>
+                    
+                    <div class="dashboard-feature">
+                        <h3>🎯 KPI Tracking</h3>
+                        <p>Monitor the metrics that matter most to your business</p>
+                    </div>
+                    
+                    <div class="dashboard-feature">
+                        <h3>⚡ Variance Alerts</h3>
+                        <p>Automatic notifications when actuals deviate from plan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="cta-centered">
+                <h2 class="cta-title">Take Control of Your Financial Future</h2>
+                <p class="cta-subtitle">Strong financial controls are the foundation of sustainable growth.</p>
+                <div class="cta-actions">
+                    <a href="/contact" class="btn btn-primary">
+                        Start Your Assessment
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="/resources/control-checklist" class="btn btn-outline">
+                        Download Control Checklist
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer (reuse from homepage) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/images/logo.png" alt="MyFinanceTeam" width="50" height="50">
+                        <span>MyFinanceTeam</span>
+                    </a>
+                    <p>Your complete finance department solution for growing businesses.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/bookkeeping">Bookkeeping</a></li>
+                        <li><a href="/accounting">Accounting</a></li>
+                        <li><a href="/payroll">Payroll</a></li>
+                        <li><a href="/cfo">Fractional CFO</a></li>
+                        <li><a href="/tax">Tax Planning</a></li>
+                        <li><a href="/cashflow">Cash Flow</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/process">Our Process</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>David Rew, Founder<br>
+                    <a href="tel:519-608-9883">519-608-9883</a><br>
+                    <a href="mailto:info@myfinanceteam.ca">info@myfinanceteam.ca</a></p>
+                    <p class="footer-serving">Serving Southwestern Ontario:<br>
+                    Woodstock • London • Kitchener-Waterloo • Cambridge • Hamilton • Guelph • Windsor</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MyFinanceTeam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Non-critical CSS -->
+    <style>
+        /* Base styles */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .section-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .bg-white {
+            background: var(--white);
+        }
+        
+        .bg-gray {
+            background: var(--gray-light);
+        }
+        
+        .bg-navy {
+            background: var(--navy-primary);
+        }
+        
+        .bg-cream {
+            background: var(--cream);
+        }
+        
+        .text-white {
+            color: var(--white);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Navigation styles */
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold-primary);
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            padding: 20px;
+            box-shadow: var(--shadow-xl);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 0;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .dropdown-menu a:hover,
+        .dropdown-menu a.active {
+            color: var(--gold-primary);
+            transform: translateX(5px);
+        }
+        
+        /* Service Hero Image */
+        .service-hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* Cost Grid */
+        .cost-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .cost-item {
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .cost-icon {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            display: block;
+        }
+        
+        .cost-icon.negative {
+            color: var(--alert, #dc2626);
+        }
+        
+        .cost-item h3 {
+            margin-bottom: 12px;
+            color: var(--black);
+        }
+        
+        .cost-item p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* Control Solutions */
+        .control-solutions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .solution-block {
+            background: var(--white);
+            padding: 48px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .solution-block h3 {
+            color: var(--black);
+            margin-bottom: 32px;
+            font-size: 1.5rem;
+        }
+        
+        .solution-list {
+            list-style: none;
+        }
+        
+        .solution-list li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        .solution-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold-primary);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        /* Transformation Grid */
+        .transformation-grid {
+            max-width: 1000px;
+            margin: 60px auto 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+        
+        .transform-item {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 24px;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .transform-from,
+        .transform-to {
+            padding: 24px;
+            border-radius: 8px;
+        }
+        
+        .transform-from {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .transform-to {
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid var(--gold-primary);
+        }
+        
+        .transform-item .label {
+            display: block;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+            opacity: 0.7;
+            color: var(--white);
+        }
+        
+        .transform-item h3 {
+            color: var(--white);
+            margin: 0;
+        }
+        
+        .transform-arrow {
+            font-size: 2rem;
+            color: var(--gold-primary);
+        }
+        
+        .transform-item p {
+            grid-column: 1 / -1;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 16px;
+            line-height: 1.8;
+        }
+        
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 60px auto 0;
+            align-items: start;
+        }
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gold-primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 0 auto 24px;
+        }
+        
+        .process-step h3 {
+            margin-bottom: 12px;
+            color: var(--black);
+        }
+        
+        .process-step p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        .process-connector {
+            display: none;
+        }
+        
+        /* Dashboard Preview */
+        .dashboard-preview {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .dashboard-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+        
+        .dashboard-feature {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .dashboard-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .dashboard-feature h3 {
+            margin-bottom: 12px;
+            color: var(--black);
+            font-size: 1.25rem;
+        }
+        
+        .dashboard-feature p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* CTA Centered */
+        .cta-centered {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+        
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .cta-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--navy-primary);
+            border: 2px solid var(--navy-primary);
+            text-decoration: none;
+        }
+        
+        .btn-outline:hover {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        /* Footer styles */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand {
+            text-align: center;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--white);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .footer h4 {
+            margin-bottom: 24px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--gold-primary);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .cost-grid,
+            .control-solutions,
+            .dashboard-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .transform-item {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .transform-arrow {
+                transform: rotate(90deg);
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .service-hero {
+                padding: 100px 20px 40px;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .solution-block {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+    
+    <!-- Deferred JavaScript -->
+    <script defer>
+        // Reuse mobile menu and header scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const header = document.querySelector('.header');
+            
+            // Mobile menu
+            menuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const isOpen = navLinks.classList.contains('active');
+                menuBtn.setAttribute('aria-expanded', isOpen);
+            });
+            
+            // Close menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+            
+            // Header scroll effect
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Financial Insights for Growing Businesses | MyFinanceTeam</title>
+    <meta name="description" content="Stay informed about financial best practices, tax changes, and growth strategies with insights from our team of experts. Free guides and tools for SMBs.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.myfinanceteam.ca/resources">
+    
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/images/resources-hero.webp" type="image/webp">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        :root {
+            --navy-primary: #1e3a52;
+            --navy-light: #2c4f6b;
+            --navy-dark: #0f1f2e;
+            --gold-primary: #d4af37;
+            --gold-light: #e4bf47;
+            --gold-dark: #b89f27;
+            --cream: #faf8f5;
+            --gray-light: #f5f5f5;
+            --white: #ffffff;
+            --black: #1a1a1a;
+            --text-dark: #2d2d2d;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --success: #059669;
+            --shadow: 0 2px 4px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            --max-width: 1400px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Header styles */
+        .header {
+            background: var(--white);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 90px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        /* Resources Hero */
+        .resources-hero {
+            background: var(--gray-light);
+            padding: 140px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resources-hero-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .resources-label {
+            color: var(--gold-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .resources-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .resources-hero-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 18px 32px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            min-height: 56px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+        }
+        
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 12px;
+                color: var(--navy-primary);
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 90px);
+                background: var(--white);
+                flex-direction: column;
+                padding: 40px 20px;
+                transition: left 0.3s ease;
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .resources-hero {
+                padding: 120px 20px 60px;
+            }
+        }
+    </style>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Resources - Financial Insights for Growing Businesses">
+    <meta property="og:description" content="Free guides, tools, and insights to help your business grow. Financial best practices from MyFinanceTeam experts.">
+    <meta property="og:url" content="https://www.myfinanceteam.ca/resources">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Resources - Financial Insights",
+        "description": "Financial resources, guides, and tools for growing businesses",
+        "publisher": {
+            "@type": "Organization",
+            "name": "MyFinanceTeam"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="/" class="logo" aria-label="MyFinanceTeam Home">
+                <img src="/images/logo.png" alt="MyFinanceTeam Logo" width="60" height="60">
+                <span class="logo-text">MyFinanceTeam</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/bookkeeping">Bookkeeping</a>
+                        <a href="/accounting">Accounting & Reporting</a>
+                        <a href="/payroll">Payroll</a>
+                        <a href="/cfo">Fractional CFO</a>
+                        <a href="/tax">Tax Planning</a>
+                        <a href="/cashflow">Cash Flow Management</a>
+                    </div>
+                </div>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/process" class="nav-link">Process</a>
+                <a href="/resources" class="nav-link active">Resources</a>
+                <a href="/contact" class="btn btn-primary">
+                    Let's Talk
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="resources-hero-content">
+            <p class="resources-label">RESOURCES</p>
+            <h1>Insights for Growing Businesses</h1>
+            <p class="resources-hero-lead">Stay informed about financial best practices, tax changes, and growth strategies with insights from our team of experts.</p>
+        </div>
+    </section>
+    
+    <!-- Featured Resources Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="section-title">Featured Resources</h2>
+            
+            <div class="resource-categories">
+                <!-- Financial Management Category -->
+                <div class="resource-category">
+                    <div class="category-icon">📊</div>
+                    <h3>Financial Management</h3>
+                    <ul class="resource-list">
+                        <li><a href="/resources/5-financial-metrics">5 Financial Metrics Every Business Owner Should Track</a></li>
+                        <li><a href="/resources/cash-to-accrual">Moving from Cash to Accrual Accounting: A Guide</a></li>
+                        <li><a href="/resources/financial-dashboard">Building Your First Financial Dashboard</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Cash Flow & Funding Category -->
+                <div class="resource-category">
+                    <div class="category-icon">💰</div>
+                    <h3>Cash Flow & Funding</h3>
+                    <ul class="resource-list">
+                        <li><a href="/resources/13-week-forecast">Master the 13-Week Cash Flow Forecast</a></li>
+                        <li><a href="/resources/investment-prep">Preparing Your Finances for Investment</a></li>
+                        <li><a href="/resources/government-grants">Government Grants: What You're Missing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Growth Strategies Category -->
+                <div class="resource-category">
+                    <div class="category-icon">📈</div>
+                    <h3>Growth Strategies</h3>
+                    <ul class="resource-list">
+                        <li><a href="/resources/first-finance-hire">When to Hire Your First Finance Person</a></li>
+                        <li><a href="/resources/scaling-finance">Scaling Finance Operations Efficiently</a></li>
+                        <li><a href="/resources/rapid-growth-planning">Financial Planning for Rapid Growth</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Tax & Compliance Category -->
+                <div class="resource-category">
+                    <div class="category-icon">🏢</div>
+                    <h3>Tax & Compliance</h3>
+                    <ul class="resource-list">
+                        <li><a href="/resources/year-end-checklist">Year-End Tax Planning Checklist</a></li>
+                        <li><a href="/resources/sred-guide">SR&ED Credits: A Practical Guide</a></li>
+                        <li><a href="/resources/sales-tax-guide">PST, GST, HST: Navigating Sales Taxes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tools & Guides Section -->
+    <section class="section bg-gray">
+        <div class="container">
+            <h2 class="section-title">Tools & Guides</h2>
+            
+            <div class="tools-grid">
+                <!-- Free Downloads -->
+                <div class="tools-category">
+                    <h3>📋 Free Downloads</h3>
+                    <div class="downloads-list">
+                        <div class="download-item">
+                            <h4>Financial Health Checklist</h4>
+                            <p>Assess your business's financial fitness with our comprehensive checklist.</p>
+                            <a href="/downloads/financial-health-checklist" class="btn btn-download">Download PDF</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>Cash Flow Forecast Template</h4>
+                            <p>Excel template for creating your 13-week rolling cash flow forecast.</p>
+                            <a href="/downloads/cash-flow-template" class="btn btn-download">Download Excel</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>Monthly Closing Checklist</h4>
+                            <p>Step-by-step guide to ensure accurate monthly financial closes.</p>
+                            <a href="/downloads/monthly-closing-checklist" class="btn btn-download">Download PDF</a>
+                        </div>
+                        
+                        <div class="download-item">
+                            <h4>KPI Dashboard Template</h4>
+                            <p>Track your key performance indicators with this customizable template.</p>
+                            <a href="/downloads/kpi-dashboard" class="btn btn-download">Download Excel</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Tutorials -->
+                <div class="tools-category">
+                    <h3>🎥 Video Tutorials</h3>
+                    <div class="video-list">
+                        <div class="video-item">
+                            <h4>QuickBooks Best Practices</h4>
+                            <p>Learn how to optimize your QuickBooks setup for maximum efficiency.</p>
+                            <a href="/videos/quickbooks-best-practices" class="btn btn-watch">Watch Video</a>
+                        </div>
+                        
+                        <div class="video-item">
+                            <h4>Understanding Financial Statements</h4>
+                            <p>Demystify your P&L, balance sheet, and cash flow statements.</p>
+                            <a href="/videos/financial-statements" class="btn btn-watch">Watch Video</a>
+                        </div>
+                        
+                        <div class="video-item">
+                            <h4>Tax Planning Basics</h4>
+                            <p>Essential tax strategies every business owner should know.</p>
+                            <a href="/videos/tax-planning-basics" class="btn btn-watch">Watch Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="section bg-navy">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="section-title text-white">Stay Updated</h2>
+                <p class="newsletter-subtitle">Join Our Newsletter</p>
+                <p class="newsletter-lead">Get monthly insights on financial management, tax updates, and growth strategies delivered to your inbox.</p>
+                
+                <form class="newsletter-form" action="/newsletter-signup" method="post">
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-gold">Subscribe Now</button>
+                </form>
+                
+                <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="cta-centered">
+                <h2>Need Personalized Advice?</h2>
+                <p>Our resources are a great start, but nothing beats expert guidance tailored to your business.</p>
+                <div class="cta-actions">
+                    <a href="/contact" class="btn btn-primary">
+                        Book a Free Consultation
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="mailto:info@myfinanceteam.ca" class="btn btn-outline">
+                        Email info@myfinanceteam.ca
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/images/logo.png" alt="MyFinanceTeam" width="50" height="50">
+                        <span>MyFinanceTeam</span>
+                    </a>
+                    <p>Your complete finance department solution for growing businesses.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/bookkeeping">Bookkeeping</a></li>
+                        <li><a href="/accounting">Accounting</a></li>
+                        <li><a href="/payroll">Payroll</a></li>
+                        <li><a href="/cfo">Fractional CFO</a></li>
+                        <li><a href="/tax">Tax Planning</a></li>
+                        <li><a href="/cashflow">Cash Flow</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/process">Our Process</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>David Rew, Founder<br>
+                    <a href="tel:519-608-9883">519-608-9883</a><br>
+                    <a href="mailto:info@myfinanceteam.ca">info@myfinanceteam.ca</a></p>
+                    <p class="footer-serving">Serving Southwestern Ontario:<br>
+                    Woodstock • London • Kitchener-Waterloo • Cambridge • Hamilton • Guelph • Windsor</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MyFinanceTeam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Non-critical CSS -->
+    <style>
+        /* Base styles */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 60px;
+            color: var(--black);
+            text-align: center;
+        }
+        
+        .bg-white {
+            background: var(--white);
+        }
+        
+        .bg-gray {
+            background: var(--gray-light);
+        }
+        
+        .bg-navy {
+            background: var(--navy-primary);
+        }
+        
+        .text-white {
+            color: var(--white);
+        }
+        
+        /* Navigation styles */
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold-primary);
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            padding: 20px;
+            box-shadow: var(--shadow-xl);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 0;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .dropdown-menu a:hover {
+            color: var(--gold-primary);
+            transform: translateX(5px);
+        }
+        
+        /* Resource Categories */
+        .resource-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+        }
+        
+        .resource-category {
+            text-align: center;
+        }
+        
+        .category-icon {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+        }
+        
+        .resource-category h3 {
+            margin-bottom: 24px;
+            color: var(--black);
+            font-size: 1.5rem;
+        }
+        
+        .resource-list {
+            list-style: none;
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .resource-list li {
+            margin-bottom: 16px;
+        }
+        
+        .resource-list a {
+            color: var(--navy-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: block;
+            padding: 8px 0;
+        }
+        
+        .resource-list a:hover {
+            color: var(--gold-primary);
+            transform: translateX(8px);
+        }
+        
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .tools-category h3 {
+            font-size: 1.75rem;
+            margin-bottom: 32px;
+            color: var(--black);
+        }
+        
+        .downloads-list,
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        
+        .download-item,
+        .video-item {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .download-item:hover,
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .download-item h4,
+        .video-item h4 {
+            margin-bottom: 12px;
+            color: var(--black);
+            font-size: 1.25rem;
+        }
+        
+        .download-item p,
+        .video-item p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .btn-download,
+        .btn-watch {
+            background: var(--gold-primary);
+            color: var(--white);
+            padding: 12px 24px;
+            font-size: 0.875rem;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .btn-download:hover,
+        .btn-watch:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Newsletter Section */
+        .newsletter-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .newsletter-subtitle {
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        
+        .newsletter-lead {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 16px;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 16px 24px;
+            font-size: 16px;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            outline: none;
+            transition: var(--transition);
+        }
+        
+        .newsletter-form input:focus {
+            border-color: var(--gold-primary);
+        }
+        
+        .btn-gold {
+            background: var(--gold-primary);
+            color: var(--white);
+        }
+        
+        .btn-gold:hover {
+            background: var(--gold-dark);
+        }
+        
+        .newsletter-privacy {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* CTA Centered */
+        .cta-centered {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-centered h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .cta-centered p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .cta-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--navy-primary);
+            border: 2px solid var(--navy-primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        /* Footer styles */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand {
+            text-align: center;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--white);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .footer h4 {
+            margin-bottom: 24px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--gold-primary);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+        }
+        
+        @media (max-width: 968px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .resource-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .resources-hero {
+                padding: 100px 20px 40px;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .cta-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    
+    <!-- Deferred JavaScript -->
+    <script defer>
+        // Mobile menu and header scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const header = document.querySelector('.header');
+            
+            // Mobile menu
+            menuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const isOpen = navLinks.classList.contains('active');
+                menuBtn.setAttribute('aria-expanded', isOpen);
+            });
+            
+            // Close menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+            
+            // Header scroll effect
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MyFinanceTeam - Your Local Finance Partners</title>
+    <meta name="description" content="MyFinanceTeam provides complete finance department solutions for SMBs in Southwestern Ontario. Based in Woodstock, serving businesses with expertise and dedication.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.myfinanceteam.ca/about">
+    
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/images/about-hero.webp" type="image/webp">
+    
+    <!-- Copy all critical CSS from previous pages -->
+    <style>
+        /* Same base styles */
+        :root {
+            --navy-primary: #1e3a52;
+            --navy-light: #2c4f6b;
+            --navy-dark: #0f1f2e;
+            --gold-primary: #d4af37;
+            --gold-light: #e4bf47;
+            --gold-dark: #b89f27;
+            --cream: #faf8f5;
+            --gray-light: #f5f5f5;
+            --white: #ffffff;
+            --black: #1a1a1a;
+            --text-dark: #2d2d2d;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --success: #059669;
+            --shadow: 0 2px 4px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            --max-width: 1400px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Header styles */
+        .header {
+            background: var(--white);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 90px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        /* About Hero */
+        .about-hero {
+            background: var(--white);
+            padding: 140px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-hero-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .about-hero-text {
+            max-width: 600px;
+        }
+        
+        .about-label {
+            color: var(--gold-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .about-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .about-hero-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 18px 32px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            min-height: 56px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+        }
+        
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 12px;
+                color: var(--navy-primary);
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 90px);
+                background: var(--white);
+                flex-direction: column;
+                padding: 40px 20px;
+                transition: left 0.3s ease;
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .about-hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-hero {
+                padding: 120px 20px 60px;
+            }
+        }
+    </style>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About MyFinanceTeam - Your Local Finance Partners">
+    <meta property="og:description" content="Complete finance department solutions for growing businesses in Southwestern Ontario.">
+    <meta property="og:url" content="https://www.myfinanceteam.ca/about">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "MyFinanceTeam",
+            "description": "Complete finance department solutions for SMBs",
+            "founder": {
+                "@type": "Person",
+                "name": "David Rew"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Woodstock",
+                "addressRegion": "ON",
+                "addressCountry": "CA"
+            },
+            "areaServed": ["Woodstock", "London", "Kitchener-Waterloo", "Cambridge", "Hamilton", "Guelph", "Windsor"]
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header (reused structure) -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="/" class="logo" aria-label="MyFinanceTeam Home">
+                <img src="/images/logo.png" alt="MyFinanceTeam Logo" width="60" height="60">
+                <span class="logo-text">MyFinanceTeam</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/bookkeeping">Bookkeeping</a>
+                        <a href="/accounting">Accounting & Reporting</a>
+                        <a href="/payroll">Payroll</a>
+                        <a href="/cfo">Fractional CFO</a>
+                        <a href="/tax">Tax Planning</a>
+                        <a href="/cashflow">Cash Flow Management</a>
+                    </div>
+                </div>
+                <a href="/about" class="nav-link active">About</a>
+                <a href="/process" class="nav-link">Process</a>
+                <a href="/resources" class="nav-link">Resources</a>
+                <a href="/contact" class="btn btn-primary">
+                    Let's Talk
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <div class="about-hero-text">
+                <p class="about-label">ABOUT US</p>
+                <h1>Your Local Finance Team</h1>
+                <p class="about-hero-lead">MyFinanceTeam was founded on a simple belief: growing businesses deserve big-company financial expertise without the big-company overhead. Based in Woodstock and serving all of Southwestern Ontario, we're your neighbors, partners, and biggest supporters in building successful businesses.</p>
+                <a href="#story" class="btn btn-primary">
+                    Learn Our Story
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+            <div class="about-hero-image">
+                <img src="/images/about-hero.webp" alt="MyFinanceTeam office and team" width="600" height="500" loading="eager">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Story Section -->
+    <section class="section bg-gray" id="story">
+        <div class="container">
+            <div class="story-content">
+                <h2 class="section-title">Our Story</h2>
+                <div class="story-text">
+                    <p class="lead-paragraph">Founded by David Rew, a seasoned finance executive with decades of experience as CFO, COO, and financial advisor to growing companies, MyFinanceTeam emerged from a clear market need. Too many SMBs were stuck between basic bookkeeping that wasn't enough and full finance departments they couldn't afford.</p>
+                    <p>We built MyFinanceTeam to fill that gap—providing fractional access to an entire finance department's expertise for a fraction of the cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why We're Different Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="section-title text-center">Why We're Different</h2>
+            
+            <div class="difference-grid">
+                <div class="difference-item">
+                    <div class="difference-icon">🏘️</div>
+                    <h3>Proudly Local</h3>
+                    <p>We're based in Woodstock and exclusively serve Southwestern Ontario businesses. We understand your market because it's our market too.</p>
+                </div>
+                
+                <div class="difference-item">
+                    <div class="difference-icon">👥</div>
+                    <h3>One Team, Complete Solution</h3>
+                    <p>Unlike piecing together different providers, we're your single source for all finance and accounting needs.</p>
+                </div>
+                
+                <div class="difference-item">
+                    <div class="difference-icon">📈</div>
+                    <h3>Growth-Stage Experts</h3>
+                    <p>We specialize in the critical phase between startup and enterprise—where most businesses need us most.</p>
+                </div>
+                
+                <div class="difference-item">
+                    <div class="difference-icon">🤝</div>
+                    <h3>True Partners</h3>
+                    <p>We measure our success by your success. Your wins are our wins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Approach Section -->
+    <section class="section bg-navy">
+        <div class="container">
+            <h2 class="section-title text-white text-center">Our Approach</h2>
+            
+            <div class="approach-cards">
+                <div class="approach-card">
+                    <h3>Right-Sized Solutions</h3>
+                    <p>We provide exactly what you need today, with the ability to scale up (or down) as you grow.</p>
+                </div>
+                
+                <div class="approach-card">
+                    <h3>Technology-Enabled</h3>
+                    <p>Modern cloud-based tools mean you have access to your finances anywhere, anytime.</p>
+                </div>
+                
+                <div class="approach-card">
+                    <h3>Proactive Communication</h3>
+                    <p>No black boxes here. We keep you informed and educated about your finances.</p>
+                </div>
+                
+                <div class="approach-card">
+                    <h3>Continuous Improvement</h3>
+                    <p>Your business evolves, and so do we. We regularly review and optimize our services to match your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Serving Section -->
+    <section class="section bg-cream">
+        <div class="container">
+            <div class="serving-content">
+                <h2 class="section-title text-center">Serving Southwestern Ontario</h2>
+                <p class="section-lead text-center">From our Woodstock headquarters, we proudly serve businesses throughout:</p>
+                
+                <div class="cities-grid">
+                    <div class="city-card">
+                        <h3>Woodstock</h3>
+                        <p>Our home base</p>
+                    </div>
+                    
+                    <div class="city-card">
+                        <h3>London</h3>
+                        <p>The Forest City's growing businesses</p>
+                    </div>
+                    
+                    <div class="city-card">
+                        <h3>Kitchener-Waterloo</h3>
+                        <p>Tech corridor companies</p>
+                    </div>
+                    
+                    <div class="city-card">
+                        <h3>Cambridge</h3>
+                        <p>Manufacturing and service businesses</p>
+                    </div>
+                    
+                    <div class="city-card">
+                        <h3>Hamilton</h3>
+                        <p>The ambitious city's enterprises</p>
+                    </div>
+                    
+                    <div class="city-card">
+                        <h3>Guelph</h3>
+                        <p>Royal City innovators</p>
+                    </div>
+                    
+                    <div class="city-card">
+                        <h3>Windsor</h3>
+                        <p>Border city businesses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="team-content">
+                <h2 class="section-title text-center">Meet Our Leadership</h2>
+                
+                <div class="founder-spotlight">
+                    <div class="founder-image">
+                        <img src="/images/david-rew.jpg" alt="David Rew, Founder" width="300" height="300" loading="lazy">
+                    </div>
+                    <div class="founder-bio">
+                        <h3>David Rew, Founder</h3>
+                        <p class="founder-title">Financial Leadership Expert</p>
+                        <p>With decades of experience as a CFO, COO, and financial advisor, David personally ensures every client gets the strategic insight they need to succeed.</p>
+                        <div class="founder-contact">
+                            <a href="tel:519-608-9883" class="contact-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M22 12A10 10 0 0 1 12 22v-2a8 8 0 0 0 8-8h2zM2 12C2 6.477 6.477 2 12 2v2a8 8 0 0 0-8 8H2z"/>
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                </svg>
+                                519-608-9883
+                            </a>
+                            <a href="mailto:david@myfinanceteam.ca" class="contact-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="m22 7-10 5L2 7"/>
+                                </svg>
+                                david@myfinanceteam.ca
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="cta-centered">
+                <h2 class="cta-title">Meet Your Finance Team</h2>
+                <p class="cta-subtitle">Let's discuss how we can support your business growth.</p>
+                <div class="cta-actions">
+                    <a href="/contact" class="btn btn-primary">
+                        Schedule a Meeting
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="tel:519-608-9883" class="btn btn-outline">
+                        Call David at 519-608-9883
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer (reuse from homepage) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/images/logo.png" alt="MyFinanceTeam" width="50" height="50">
+                        <span>MyFinanceTeam</span>
+                    </a>
+                    <p>Your complete finance department solution for growing businesses.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/bookkeeping">Bookkeeping</a></li>
+                        <li><a href="/accounting">Accounting</a></li>
+                        <li><a href="/payroll">Payroll</a></li>
+                        <li><a href="/cfo">Fractional CFO</a></li>
+                        <li><a href="/tax">Tax Planning</a></li>
+                        <li><a href="/cashflow">Cash Flow</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/process">Our Process</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>David Rew, Founder<br>
+                    <a href="tel:519-608-9883">519-608-9883</a><br>
+                    <a href="mailto:info@myfinanceteam.ca">info@myfinanceteam.ca</a></p>
+                    <p class="footer-serving">Serving Southwestern Ontario:<br>
+                    Woodstock • London • Kitchener-Waterloo • Cambridge • Hamilton • Guelph • Windsor</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MyFinanceTeam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Non-critical CSS -->
+    <style>
+        /* Base styles */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .section-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .bg-white {
+            background: var(--white);
+        }
+        
+        .bg-gray {
+            background: var(--gray-light);
+        }
+        
+        .bg-navy {
+            background: var(--navy-primary);
+        }
+        
+        .bg-cream {
+            background: var(--cream);
+        }
+        
+        .text-white {
+            color: var(--white);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Navigation styles */
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold-primary);
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            padding: 20px;
+            box-shadow: var(--shadow-xl);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 0;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .dropdown-menu a:hover {
+            color: var(--gold-primary);
+            transform: translateX(5px);
+        }
+        
+        /* About Hero Image */
+        .about-hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* Story Content */
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .story-text {
+            margin-top: 40px;
+        }
+        
+        .lead-paragraph {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            color: var(--text-gray);
+        }
+        
+        .story-text p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        /* Difference Grid */
+        .difference-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 48px;
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+        
+        .difference-item {
+            text-align: center;
+        }
+        
+        .difference-icon {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            display: block;
+        }
+        
+        .difference-item h3 {
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+        
+        .difference-item p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* Approach Cards */
+        .approach-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+        
+        .approach-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        
+        .approach-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .approach-card h3 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        
+        .approach-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+        }
+        
+        /* Cities Grid */
+        .serving-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+        
+        .city-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .city-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .city-card h3 {
+            color: var(--black);
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+        }
+        
+        .city-card p {
+            color: var(--text-gray);
+            font-size: 0.875rem;
+        }
+        
+        /* Team Section */
+        .team-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .founder-spotlight {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+        
+        .founder-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .founder-bio h3 {
+            color: var(--black);
+            margin-bottom: 8px;
+            font-size: 2rem;
+        }
+        
+        .founder-title {
+            color: var(--gold-primary);
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .founder-bio p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        .founder-contact {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--navy-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .contact-link:hover {
+            color: var(--gold-primary);
+        }
+        
+        .contact-link svg {
+            flex-shrink: 0;
+        }
+        
+        /* CTA Centered */
+        .cta-centered {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+        
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .cta-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--navy-primary);
+            border: 2px solid var(--navy-primary);
+            text-decoration: none;
+        }
+        
+        .btn-outline:hover {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        /* Footer styles */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand {
+            text-align: center;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--white);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .footer h4 {
+            margin-bottom: 24px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--gold-primary);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .difference-grid,
+            .approach-cards,
+            .cities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .founder-spotlight {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .founder-image {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .founder-contact {
+                justify-content: center;
+            }
+            
+            .cta-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .about-hero {
+                padding: 100px 20px 40px;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .difference-icon {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+    
+    <!-- Deferred JavaScript -->
+    <script defer>
+        // Reuse mobile menu and header scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const header = document.querySelector('.header');
+            
+            // Mobile menu
+            menuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const isOpen = navLinks.classList.contains('active');
+                menuBtn.setAttribute('aria-expanded', isOpen);
+            });
+            
+            // Close menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+            
+            // Header scroll effect
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+        });
+    </script>
+</body>
+</html>
