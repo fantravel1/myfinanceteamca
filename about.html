@@ -218,19 +218,43 @@
                 padding: 120px 20px 60px;
             }
 
-            /* Mobile dropdown fix - ADD THIS */
+            /* Mobile dropdown fix - REPLACE WITH THIS FROM INDEX */
             .nav-link {
                 text-align: center;
                 width: 100%;
                 display: block;
             }
             
-            .nav-dropdown .dropdown-menu {
+            .nav-dropdown {
+                position: static;
+                width: 100%;
+            }
+            
+            .dropdown-menu {
+                position: static !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: var(--white, #ffffff);
+                margin: 10px 0 20px 20px;
+                display: none;
+                width: calc(100% - 20px);
+                padding: 15px;
+                border-radius: 8px;
+                border: 1px solid rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: none;
+            }
+            
+            .nav-dropdown:hover .dropdown-menu {
                 display: none;
             }
             
             .nav-dropdown.active .dropdown-menu {
                 display: block;
+                max-height: 500px;
             }
             
             .nav-dropdown.active .dropdown-arrow {
