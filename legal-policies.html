@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy, Terms of Service & Cookie Policy - MyFinanceTeam</title>
+    <meta name="description" content="MyFinanceTeam's privacy policy, terms of service, and cookie policy. Learn how we protect your information and our service terms.">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Open Graph Image -->
+    <meta property="og:image" content="https://www.myfinanceteam.ca/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="MyFinanceTeam - Your Complete Finance Department">
+    
+    <!-- Twitter Card Image -->
+    <meta name="twitter:image" content="https://www.myfinanceteam.ca/images/og-image.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.myfinanceteam.ca/legal">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        :root {
+            --navy-primary: #1e3a52;
+            --navy-light: #2c4f6b;
+            --navy-dark: #0f1f2e;
+            --gold-primary: #d4af37;
+            --gold-light: #e4bf47;
+            --gold-dark: #b89f27;
+            --cream: #faf8f5;
+            --gray-light: #f5f5f5;
+            --white: #ffffff;
+            --black: #1a1a1a;
+            --text-dark: #2d2d2d;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --success: #059669;
+            --shadow: 0 2px 4px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            --max-width: 1400px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Header styles */
+        .header {
+            background: var(--white);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 90px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        /* Page Hero */
+        .legal-hero {
+            background: var(--gray-light);
+            padding: 140px 40px 80px;
+        }
+        
+        .legal-hero-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .legal-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--black);
+        }
+        
+        .legal-hero-lead {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 18px 32px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            min-height: 56px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            letter-spacing: -0.01em;
+        }
+        
+        .btn-primary {
+            background: var(--navy-primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+        }
+        
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 12px;
+                color: var(--navy-primary);
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 90px);
+                background: var(--white);
+                flex-direction: column;
+                padding: 40px 20px;
+                transition: left 0.3s ease;
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            /* Mobile dropdown styles */
+            .nav-link {
+                text-align: center;
+                width: 100%;
+                display: block;
+            }
+            
+            .nav-dropdown {
+                position: static;
+                width: 100%;
+            }
+            
+            .dropdown-menu {
+                position: static !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: var(--white);
+                margin: 10px 0 20px 20px;
+                display: none;
+                width: calc(100% - 20px);
+                padding: 15px;
+                border-radius: 8px;
+                border: 1px solid rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: none;
+            }
+            
+            .nav-dropdown:hover .dropdown-menu {
+                display: none;
+            }
+            
+            .nav-dropdown.active .dropdown-menu {
+                display: block;
+                max-height: 500px;
+            }
+            
+            .nav-dropdown.active .dropdown-arrow {
+                transform: rotate(180deg);
+            }
+            
+            .legal-hero {
+                padding: 120px 20px 60px;
+            }
+        }
+    </style>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Legal Policies - MyFinanceTeam">
+    <meta property="og:description" content="Privacy policy, terms of service, and cookie policy for MyFinanceTeam.">
+    <meta property="og:url" content="https://www.myfinanceteam.ca/legal">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="/" class="logo" aria-label="MyFinanceTeam Home">
+                <img src="/images/logo.png" alt="MyFinanceTeam Logo" width="60" height="60">
+                <span class="logo-text">MyFinanceTeam</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="/bookkeeping">Bookkeeping</a>
+                        <a href="/accounting">Accounting & Reporting</a>
+                        <a href="/payroll">Payroll</a>
+                        <a href="/cfo">Fractional CFO</a>
+                        <a href="/tax">Tax Planning</a>
+                        <a href="/cashflow">Cash Flow Management</a>
+                    </div>
+                </div>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/process" class="nav-link">Process</a>
+                <a href="/resources" class="nav-link">Resources</a>
+                <a href="/contact" class="btn btn-primary">
+                    Let's Talk
+                    <span class="btn-icon">→</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="legal-hero">
+        <div class="legal-hero-content">
+            <h1>Legal Policies</h1>
+            <p class="legal-hero-lead">Our commitment to protecting your privacy and establishing clear terms for our professional services.</p>
+        </div>
+    </section>
+    
+    <!-- Legal Content -->
+    <section class="section bg-white">
+        <div class="container">
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h2>Quick Navigation</h2>
+                <ul>
+                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                    <li><a href="#terms-of-service">Terms of Service</a></li>
+                    <li><a href="#cookie-policy">Cookie Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="legal-disclaimer">
+                <p><strong>Legal Disclaimer:</strong> These policies are provided as templates and should be reviewed by qualified legal counsel before implementation. MyFinanceTeam reserves the right to update these policies at any time.</p>
+            </div>
+
+            <!-- Privacy Policy -->
+            <div id="privacy-policy" class="legal-section">
+                <h2>Privacy Policy</h2>
+                <p class="last-updated">Last Updated: December 19, 2024</p>
+                
+                <h3>1. Introduction</h3>
+                <p>MyFinanceTeam ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.myfinanceteam.ca or use our professional services.</p>
+                
+                <h3>2. Information We Collect</h3>
+                
+                <h4>2.1 Personal Information</h4>
+                <p>We may collect personal information that you voluntarily provide to us, including:</p>
+                <ul>
+                    <li>Name and contact information (email, phone, address)</li>
+                    <li>Business information (company name, role, industry)</li>
+                    <li>Financial information necessary to provide services</li>
+                    <li>Communications and correspondence with us</li>
+                </ul>
+                
+                <h4>2.2 Automatically Collected Information</h4>
+                <p>When you visit our website, we may automatically collect:</p>
+                <ul>
+                    <li>IP address and browser information</li>
+                    <li>Website usage data and analytics</li>
+                    <li>Cookies and similar tracking technologies</li>
+                </ul>
+                
+                <h3>3. How We Use Your Information</h3>
+                <p>We use your information to:</p>
+                <ul>
+                    <li>Provide professional financial services</li>
+                    <li>Communicate about our services and respond to inquiries</li>
+                    <li>Improve our website and services</li>
+                    <li>Comply with legal and regulatory requirements</li>
+                    <li>Send marketing communications (with your consent)</li>
+                </ul>
+                
+                <h3>4. Information Sharing and Disclosure</h3>
+                <p>We do not sell, trade, or rent your personal information. We may share information in the following circumstances:</p>
+                <ul>
+                    <li>With your explicit consent</li>
+                    <li>To comply with legal obligations</li>
+                    <li>With professional service providers (accountants, lawyers) as necessary</li>
+                    <li>To protect our rights and property</li>
+                </ul>
+                
+                <h3>5. Data Security</h3>
+                <p>We implement appropriate security measures to protect your personal information, including:</p>
+                <ul>
+                    <li>Encryption of sensitive data</li>
+                    <li>Secure server infrastructure</li>
+                    <li>Limited access to personal information</li>
+                    <li>Regular security assessments</li>
+                </ul>
+                
+                <h3>6. Your Rights</h3>
+                <p>Under Canadian privacy law, you have the right to:</p>
+                <ul>
+                    <li>Access your personal information</li>
+                    <li>Correct inaccurate information</li>
+                    <li>Request deletion of your information</li>
+                    <li>Withdraw consent for marketing communications</li>
+                    <li>File a complaint with privacy authorities</li>
+                </ul>
+                
+                <h3>7. Retention</h3>
+                <p>We retain your personal information only as long as necessary to fulfill the purposes outlined in this policy or as required by law. Financial and business records may be retained for up to 7 years as required by Canadian tax and business regulations.</p>
+                
+                <h3>8. Contact Us</h3>
+                <p>For privacy-related questions or requests, contact us at:</p>
+                <p>Email: privacy@myfinanceteam.ca<br>
+                Phone: 519-608-9883<br>
+                Address: Woodstock, Ontario, Canada</p>
+            </div>
+
+            <!-- Terms of Service -->
+            <div id="terms-of-service" class="legal-section">
+                <h2>Terms of Service</h2>
+                <p class="last-updated">Last Updated: December 19, 2024</p>
+                
+                <h3>1. Acceptance of Terms</h3>
+                <p>By accessing and using MyFinanceTeam's website and services, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+                
+                <h3>2. Services Description</h3>
+                <p>MyFinanceTeam provides professional financial services including:</p>
+                <ul>
+                    <li>Bookkeeping and accounting services</li>
+                    <li>Payroll processing and management</li>
+                    <li>Fractional CFO services</li>
+                    <li>Tax planning and preparation</li>
+                    <li>Cash flow management</li>
+                    <li>Financial consulting and advisory services</li>
+                </ul>
+                
+                <h3>3. Professional Relationship</h3>
+                <p>Our services create a professional services relationship, not an employment relationship. We maintain independence in performing professional services while acting in your best interests.</p>
+                
+                <h3>4. Client Responsibilities</h3>
+                <p>As our client, you agree to:</p>
+                <ul>
+                    <li>Provide accurate and complete information</li>
+                    <li>Maintain proper books and records</li>
+                    <li>Pay fees according to agreed terms</li>
+                    <li>Respond promptly to requests for information</li>
+                    <li>Comply with applicable laws and regulations</li>
+                </ul>
+                
+                <h3>5. Fees and Payment</h3>
+                <ul>
+                    <li>Fees are based on agreed-upon rates and scope of work</li>
+                    <li>Payment terms are typically net 30 days unless otherwise agreed</li>
+                    <li>Late payments may incur interest charges</li>
+                    <li>We reserve the right to suspend services for non-payment</li>
+                </ul>
+                
+                <h3>6. Confidentiality</h3>
+                <p>We maintain strict confidentiality of all client information in accordance with professional standards and applicable laws. This obligation continues indefinitely, even after the termination of our professional relationship.</p>
+                
+                <h3>7. Limitation of Liability</h3>
+                <p>Our liability for any claim related to our services is limited to the fees paid for the specific services that gave rise to the claim. We are not liable for consequential, indirect, or punitive damages.</p>
+                
+                <h3>8. Professional Standards</h3>
+                <p>Our services are performed in accordance with Canadian professional accounting standards and applicable regulations. We maintain professional insurance coverage.</p>
+                
+                <h3>9. Termination</h3>
+                <p>Either party may terminate the professional relationship with reasonable notice. Upon termination, we will provide you with your records and work product, subject to payment of outstanding fees.</p>
+                
+                <h3>10. Dispute Resolution</h3>
+                <p>Any disputes will be resolved through mediation, and if necessary, arbitration in accordance with Ontario law. These terms are governed by Ontario and Canadian law.</p>
+                
+                <h3>11. Website Use</h3>
+                <p>You may use our website for informational purposes only. You may not:</p>
+                <ul>
+                    <li>Copy or distribute content without permission</li>
+                    <li>Use automated systems to access the website</li>
+                    <li>Attempt to gain unauthorized access</li>
+                    <li>Interfere with website operation</li>
+                </ul>
+                
+                <h3>12. Changes to Terms</h3>
+                <p>We reserve the right to modify these terms at any time. Changes will be posted on our website and, for significant changes, we will provide direct notice to clients.</p>
+            </div>
+
+            <!-- Cookie Policy -->
+            <div id="cookie-policy" class="legal-section">
+                <h2>Cookie Policy</h2>
+                <p class="last-updated">Last Updated: December 19, 2024</p>
+                
+                <h3>1. What Are Cookies</h3>
+                <p>Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better user experience by remembering your preferences and analyzing how you use our site.</p>
+                
+                <h3>2. Types of Cookies We Use</h3>
+                
+                <h4>2.1 Essential Cookies</h4>
+                <p>These cookies are necessary for the website to function properly. They enable basic functions like page navigation and access to secure areas.</p>
+                
+                <h4>2.2 Performance Cookies</h4>
+                <p>These cookies help us understand how visitors interact with our website by collecting information about pages visited and any errors encountered.</p>
+                
+                <h4>2.3 Functional Cookies</h4>
+                <p>These cookies allow the website to remember choices you make and provide enhanced features and personal content.</p>
+                
+                <h4>2.4 Marketing Cookies</h4>
+                <p>These cookies track your online activity to help us deliver more relevant advertising and measure the effectiveness of our marketing campaigns.</p>
+                
+                <h3>3. Specific Cookies Used</h3>
+                <table class="cookie-table">
+                    <thead>
+                        <tr>
+                            <th>Cookie Name</th>
+                            <th>Purpose</th>
+                            <th>Duration</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>_ga</td>
+                            <td>Google Analytics - User identification</td>
+                            <td>2 years</td>
+                            <td>Performance</td>
+                        </tr>
+                        <tr>
+                            <td>_gid</td>
+                            <td>Google Analytics - Session identification</td>
+                            <td>24 hours</td>
+                            <td>Performance</td>
+                        </tr>
+                        <tr>
+                            <td>consent</td>
+                            <td>Cookie consent preferences</td>
+                            <td>1 year</td>
+                            <td>Essential</td>
+                        </tr>
+                        <tr>
+                            <td>session_id</td>
+                            <td>Session management</td>
+                            <td>Session</td>
+                            <td>Essential</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>4. Third-Party Cookies</h3>
+                <p>We may use third-party services that place cookies on your device:</p>
+                <ul>
+                    <li><strong>Google Analytics:</strong> To analyze website traffic and user behavior</li>
+                    <li><strong>Form Services:</strong> To process contact form submissions</li>
+                    <li><strong>Social Media:</strong> To enable social sharing features</li>
+                </ul>
+                
+                <h3>5. Managing Cookies</h3>
+                <p>You can control cookies through your browser settings:</p>
+                <ul>
+                    <li>Block all cookies</li>
+                    <li>Accept only first-party cookies</li>
+                    <li>Delete existing cookies</li>
+                    <li>Receive notifications when cookies are set</li>
+                </ul>
+                
+                <p>Note that blocking certain cookies may affect website functionality and your user experience.</p>
+                
+                <h3>6. Cookie Consent</h3>
+                <p>By continuing to use our website, you consent to our use of cookies as described in this policy. You can withdraw your consent at any time by adjusting your browser settings or contacting us.</p>
+                
+                <h3>7. Updates to This Policy</h3>
+                <p>We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+                
+                <h3>8. Contact Information</h3>
+                <p>If you have questions about our use of cookies, please contact us at:</p>
+                <p>Email: privacy@myfinanceteam.ca<br>
+                Phone: 519-608-9883</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/images/logo.png" alt="MyFinanceTeam" width="50" height="50">
+                        <span>MyFinanceTeam</span>
+                    </a>
+                    <p>Your complete finance department solution for growing businesses.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/bookkeeping">Bookkeeping</a></li>
+                        <li><a href="/accounting">Accounting</a></li>
+                        <li><a href="/payroll">Payroll</a></li>
+                        <li><a href="/cfo">Fractional CFO</a></li>
+                        <li><a href="/tax">Tax Planning</a></li>
+                        <li><a href="/cashflow">Cash Flow</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/process">Our Process</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>David Rew, Founder<br>
+                    <a href="tel:519-608-9883">519-608-9883</a><br>
+                    <a href="mailto:info@myfinanceteam.ca">info@myfinanceteam.ca</a></p>
+                    <p class="footer-serving">Serving Southwestern Ontario:<br>
+                    Woodstock • London • Kitchener-Waterloo • Cambridge • Hamilton • Guelph • Windsor</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MyFinanceTeam. All rights reserved. | <a href="/legal">Legal Policies</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Non-critical CSS -->
+    <style>
+        /* Base styles */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .bg-white {
+            background: var(--white);
+        }
+        
+        /* Navigation styles */
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        .nav-link:hover {
+            color: var(--gold-primary);
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            transition: var(--transition);
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 220px;
+            padding: 20px;
+            box-shadow: var(--shadow-xl);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 0;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .dropdown-menu a:hover {
+            color: var(--gold-primary);
+            transform: translateX(5px);
+        }
+        
+        /* Legal Content Styles */
+        .toc {
+            background: var(--cream);
+            padding: 32px;
+            border-radius: 8px;
+            margin-bottom: 48px;
+        }
+        
+        .toc h2 {
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+        
+        .toc ul {
+            list-style: none;
+        }
+        
+        .toc li {
+            margin-bottom: 8px;
+        }
+        
+        .toc a {
+            color: var(--navy-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .toc a:hover {
+            color: var(--gold-primary);
+        }
+        
+        .legal-disclaimer {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 48px;
+        }
+        
+        .legal-section {
+            margin-bottom: 80px;
+        }
+        
+        .legal-section h2 {
+            font-size: 2.5rem;
+            color: var(--navy-primary);
+            margin-bottom: 16px;
+            border-bottom: 3px solid var(--gold-primary);
+            padding-bottom: 16px;
+        }
+        
+        .legal-section h3 {
+            font-size: 1.5rem;
+            color: var(--black);
+            margin: 32px 0 16px 0;
+        }
+        
+        .legal-section h4 {
+            font-size: 1.25rem;
+            color: var(--black);
+            margin: 24px 0 12px 0;
+        }
+        
+        .legal-section p {
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+        
+        .legal-section ul {
+            margin: 16px 0 16px 32px;
+        }
+        
+        .legal-section li {
+            margin-bottom: 8px;
+            line-height: 1.8;
+        }
+        
+        .last-updated {
+            font-style: italic;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+        
+        /* Cookie Table */
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.9rem;
+        }
+        
+        .cookie-table th,
+        .cookie-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .cookie-table th {
+            background-color: var(--gray-light);
+            font-weight: 600;
+            color: var(--black);
+        }
+        
+        .cookie-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Footer styles */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand {
+            text-align: center;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--white);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .footer-logo span {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .footer h4 {
+            margin-bottom: 24px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            color: var(--gold-primary);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .cookie-table {
+                font-size: 0.8rem;
+            }
+            
+            .cookie-table th,
+            .cookie-table td {
+                padding: 8px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .legal-hero {
+                padding: 100px 20px 40px;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .legal-section h2 {
+                font-size: 2rem;
+            }
+            
+            .cookie-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+    </style>
+    
+    <!-- JavaScript -->
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            const header = document.querySelector('.header');
+            
+            // Mobile menu
+            menuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const isOpen = navLinks.classList.contains('active');
+                menuBtn.setAttribute('aria-expanded', isOpen);
+            });
+            
+            // Mobile dropdown handler
+            const dropdowns = document.querySelectorAll('.nav-dropdown');
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-link');
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 968) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                        dropdowns.forEach(other => {
+                            if (other !== dropdown) other.classList.remove('active');
+                        });
+                    }
+                });
+            });
+            
+            // Close menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (!e.target.closest('.nav-dropdown > .nav-link')) {
+                        navLinks.classList.remove('active');
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+            
+            // Header scroll effect
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
