@@ -1304,6 +1304,7 @@
     </style>
     
     <!-- Deferred JavaScript -->
+    <!-- Deferred JavaScript -->
     <script defer>
         // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
@@ -1318,11 +1319,35 @@
                 menuBtn.setAttribute('aria-expanded', isOpen);
             });
             
-            // Close menu on link click
+            // ADD THIS NEW CODE HERE - Mobile dropdown handling
+            const dropdowns = document.querySelectorAll('.nav-dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-link');
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 968) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                        
+                        // Close other dropdowns
+                        dropdowns.forEach(other => {
+                            if (other !== dropdown) {
+                                other.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            });
+            // END OF NEW CODE
+            
+            // Close menu on link click (MODIFY THIS SECTION)
             navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    menuBtn.setAttribute('aria-expanded', 'false');
+                link.addEventListener('click', (e) => {
+                    // Don't close if clicking the dropdown toggle
+                    if (!e.target.closest('.nav-dropdown > .nav-link')) {
+                        navLinks.classList.remove('active');
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                    }
                 });
             });
             
