@@ -303,6 +303,43 @@
                 padding: 140px 20px 80px;
             }
         }
+
+        /* Mobile dropdown fix */
+        @media (max-width: 968px) {
+            .nav-dropdown {
+                position: static;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+                box-shadow: none;
+                margin: 10px 0 20px 20px;
+                display: none;
+                width: 100%;
+                background: transparent;
+                padding: 0;
+            }
+            
+            .nav-dropdown:hover .dropdown-menu {
+                display: none; /* Disable hover on mobile */
+            }
+            
+            /* Toggle dropdown on click for mobile */
+            .nav-dropdown.active .dropdown-menu {
+                display: block;
+            }
+            
+            .dropdown-arrow {
+                transition: transform 0.3s ease;
+            }
+            
+            .nav-dropdown.active .dropdown-arrow {
+                transform: rotate(180deg);
+            }
+        }
     </style>
     
     <!-- Open Graph -->
