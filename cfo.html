@@ -183,6 +183,10 @@
         }
         
         @media (max-width: 968px) {
+            .nav-container {
+                padding: 0 20px;
+            }
+            
             .mobile-menu-btn {
                 display: block;
                 background: none;
@@ -209,6 +213,13 @@
                 left: 0;
             }
             
+            /* Center nav items in mobile menu */
+            .nav-link {
+                text-align: center;
+                width: 100%;
+                display: block;
+            }
+            
             .service-hero-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -216,6 +227,44 @@
             
             .service-hero {
                 padding: 120px 20px 60px;
+            }
+            
+            /* Mobile dropdown styles - THIS IS THE FIX */
+            .nav-dropdown {
+                position: static;
+                width: 100%;
+            }
+            
+            .dropdown-menu {
+                position: static !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: var(--white);
+                margin: 10px 0 20px 20px;
+                display: none;
+                width: calc(100% - 20px);
+                padding: 15px;
+                border-radius: 8px;
+                border: 1px solid rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: none;
+            }
+            
+            .nav-dropdown:hover .dropdown-menu {
+                display: none; /* Disable hover on mobile */
+            }
+            
+            /* Show dropdown when active */
+            .nav-dropdown.active .dropdown-menu {
+                display: block;
+                max-height: 500px;
+            }
+            
+            .nav-dropdown.active .dropdown-arrow {
+                transform: rotate(180deg);
             }
         }
     </style>
@@ -258,7 +307,7 @@
             
             <div class="nav-links" id="navLinks">
                 <div class="nav-dropdown">
-                    <a href="#services" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                    <a href="#services" class="nav-link">Services <span class="dropdown-arrow">â–¼</span></a>
                     <div class="dropdown-menu">
                         <a href="/bookkeeping">Bookkeeping</a>
                         <a href="/accounting">Accounting & Reporting</a>
@@ -273,7 +322,7 @@
                 <a href="/resources" class="nav-link">Resources</a>
                 <a href="/contact" class="btn btn-primary">
                     Let's Talk
-                    <span class="btn-icon">→</span>
+                    <span class="btn-icon">â†'</span>
                 </a>
             </div>
         </nav>
@@ -288,7 +337,7 @@
                 <p class="service-hero-lead">Need the strategic guidance of a CFO, without the full-time overhead? Our fractional CFOs bring decades of experience building, funding, and scaling businesses just like yours. Benefit from CFO-level thinking for a fraction of the cost.</p>
                 <a href="#consultation" class="btn btn-primary">
                     Schedule a conversation
-                    <span class="btn-icon">→</span>
+                    <span class="btn-icon">â†'</span>
                 </a>
             </div>
             <div class="service-hero-image">
@@ -396,7 +445,7 @@
             <div class="experience-content">
                 <div class="experience-text">
                     <h2>CFO Experience That Matters</h2>
-                    <p class="experience-lead">Our fractional CFOs have been in your shoes—they've raised capital, scaled businesses, and navigated exits</p>
+                    <p class="experience-lead">Our fractional CFOs have been in your shoesâ€"they've raised capital, scaled businesses, and navigated exits</p>
                     
                     <div class="experience-stats">
                         <div class="exp-stat">
@@ -433,7 +482,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Flexible Engagement Models</h2>
-                <p class="section-lead">From a few hours monthly to multiple days per week—pay only for what you need</p>
+                <p class="section-lead">From a few hours monthly to multiple days per weekâ€"pay only for what you need</p>
             </div>
             
             <div class="engagement-cards">
@@ -498,19 +547,19 @@
                 <div class="impact-card">
                     <h3>For Growing Companies</h3>
                     <p>Strategic guidance to scale efficiently while maintaining healthy unit economics and extending runway</p>
-                    <a href="/resources/scaling-guide" class="impact-link">Download Scaling Guide →</a>
+                    <a href="/resources/scaling-guide" class="impact-link">Download Scaling Guide â†'</a>
                 </div>
                 
                 <div class="impact-card">
                     <h3>For Funded Startups</h3>
                     <p>Investor-grade reporting, board support, and strategic planning to hit your milestones and raise your next round</p>
-                    <a href="/resources/investor-reporting" class="impact-link">See Reporting Templates →</a>
+                    <a href="/resources/investor-reporting" class="impact-link">See Reporting Templates â†'</a>
                 </div>
                 
                 <div class="impact-card">
                     <h3>For Established SMBs</h3>
                     <p>Profitability optimization, acquisition planning, and strategic initiatives to drive enterprise value</p>
-                    <a href="/resources/value-creation" class="impact-link">Learn Value Creation →</a>
+                    <a href="/resources/value-creation" class="impact-link">Learn Value Creation â†'</a>
                 </div>
             </div>
         </div>
@@ -525,7 +574,7 @@
                 <div class="cta-actions">
                     <a href="/contact" class="btn btn-primary">
                         Schedule CFO Consultation
-                        <span class="btn-icon">→</span>
+                        <span class="btn-icon">â†'</span>
                     </a>
                     <a href="/resources/cfo-assessment" class="btn btn-outline">
                         Take CFO Readiness Assessment
@@ -576,7 +625,7 @@
                     <a href="tel:519-608-9883">519-608-9883</a><br>
                     <a href="mailto:info@myfinanceteam.ca">info@myfinanceteam.ca</a></p>
                     <p class="footer-serving">Serving Southwestern Ontario:<br>
-                    Woodstock • London • Kitchener-Waterloo • Cambridge • Hamilton • Guelph • Windsor</p>
+                    Woodstock â€¢ London â€¢ Kitchener-Waterloo â€¢ Cambridge â€¢ Hamilton â€¢ Guelph â€¢ Windsor</p>
                 </div>
             </div>
             
@@ -665,6 +714,12 @@
         
         .nav-dropdown {
             position: relative;
+        }
+        
+        .dropdown-arrow {
+            font-size: 10px;
+            margin-left: 4px;
+            transition: var(--transition);
         }
         
         .dropdown-menu {
@@ -787,7 +842,7 @@
         }
         
         .cfo-solution li::before {
-            content: "•";
+            content: "â€¢";
             position: absolute;
             left: 0;
             color: var(--gold-primary);
@@ -941,7 +996,7 @@
         }
         
         .engagement-card li::before {
-            content: "✓";
+            content: "âœ"";
             position: absolute;
             left: 0;
             color: var(--gold-primary);
@@ -1177,11 +1232,34 @@
                 menuBtn.setAttribute('aria-expanded', isOpen);
             });
             
-            // Close menu on link click
+            // Mobile dropdown handling
+            const dropdowns = document.querySelectorAll('.nav-dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-link');
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 968) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                        
+                        // Close other dropdowns
+                        dropdowns.forEach(other => {
+                            if (other !== dropdown) {
+                                other.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Close menu on link click (but not dropdown toggles)
             navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    menuBtn.setAttribute('aria-expanded', 'false');
+                link.addEventListener('click', (e) => {
+                    // Don't close if clicking the dropdown toggle
+                    if (!e.target.closest('.nav-dropdown > .nav-link')) {
+                        navLinks.classList.remove('active');
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                    }
                 });
             });
             
